@@ -25,7 +25,7 @@ interface ButtonProps {
 }
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for user interaction omg sy
  */
 export const Button = ({
   primary = false,

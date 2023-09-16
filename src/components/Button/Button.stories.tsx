@@ -5,6 +5,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   title: "组件/Button",
   argTypes: {},
+  tags: ["autodocs"],
 };
 export default meta;
 
@@ -66,3 +67,5 @@ Large.args = {
   size: "large",
   text: "Large",
 };
+
+
