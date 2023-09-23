@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/react", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:7.4.3"],\
             ["@storybook/react-vite", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:7.4.3"],\
             ["@storybook/testing-library", "npm:0.2.1"],\
+            ["@types/node", "npm:20.6.3"],\
             ["@types/react", "npm:18.2.22"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:6.7.2"],\
@@ -8587,6 +8588,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/react", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:7.4.3"],\
             ["@storybook/react-vite", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:7.4.3"],\
             ["@storybook/testing-library", "npm:0.2.1"],\
+            ["@types/node", "npm:20.6.3"],\
             ["@types/react", "npm:18.2.22"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:6.7.2"],\
@@ -13316,7 +13318,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite", "virtual:0843b0f7553ee5f802946cca4e0e9aa166cb3007725d5b9882c57b4bf00999000065533eb944884c11d2368caf30759d9a3ebb8e6419e4b88e532e4849574db3#npm:4.4.9"],\
             ["@types/less", null],\
             ["@types/lightningcss", null],\
-            ["@types/node", null],\
+            ["@types/node", "npm:20.6.3"],\
             ["@types/sass", null],\
             ["@types/stylus", null],\
             ["@types/sugarss", null],\
