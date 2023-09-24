@@ -1,29 +1,16 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true,
-    "jsx": "react",
-    "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "emitDeclarationOnly": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true
-  },
-  "exclude": [
-    "dist",
-    "node_modules",
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx"
-  ],
-  "ts-node": {
-    "moduleTypes": {
-      "jest.config.ts": "cjs"
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "fish-ui": ["src"],
+      "fish-ui/*": ["src/*", "*"]
     }
-  }
+  },
+  "include": [".dumirc.ts", "src/**/*"]
 }
