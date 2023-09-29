@@ -1,11 +1,11 @@
 ---
 hero:
-  title: library
-  description: A react library developed with dumi
+  title: Fish UI
+  description: 属于自己的 React 组件库
   actions:
-    - text: Hello
-      link: /
-    - text: World
+    - text: 开始使用
+      link: /components/overview
+    - text: 设计
       link: /
 features:
   - title: Hello
