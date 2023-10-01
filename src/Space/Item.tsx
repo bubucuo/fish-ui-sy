@@ -1,41 +1,16 @@
 import * as React from 'react';
-import type { SpaceContextType } from './context';
-import { SpaceContext } from './context';
-
-// import type { SpaceContextType } from './context';
-// import { SpaceContext } from './context';
 
 export interface ItemProps {
   className: string;
   children: React.ReactNode;
-  index: number;
-  split?: React.ReactNode;
-  style?: React.CSSProperties;
 }
 
-const Item: React.FC<ItemProps> = ({
-  className,
-  index,
-  children,
-  split,
-  style,
-}) => {
-  const { latestIndex } = React.useContext<SpaceContextType>(SpaceContext);
-
+const Item: React.FC<ItemProps> = ({ className, children }) => {
   if (children === null || children === undefined) {
     return null;
   }
 
-  return (
-    <>
-      <div className={className} style={style}>
-        {children}
-      </div>
-      {index < latestIndex && split && (
-        <span className={`${className}-split`}>{split}</span>
-      )}
-    </>
-  );
+  return <div className={className}>{children}</div>;
 };
 
 export default Item;

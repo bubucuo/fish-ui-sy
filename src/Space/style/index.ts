@@ -1,5 +1,6 @@
-import type { FullToken, GenerateStyle } from 'fish-ui/theme/internal';
-import { genComponentStyleHook, mergeToken } from 'fish-ui/theme/internal';
+import { mergeToken, type GenerateStyle } from '../../theme/internal';
+import type { FullToken } from '../../theme/util/genComponentStyleHook';
+import genComponentStyleHook from '../../theme/util/genComponentStyleHook';
 
 export interface ComponentToken {
   // Component token here
@@ -11,37 +12,41 @@ interface SpaceToken extends FullToken<'Space'> {
   spaceGapLargeSize: number;
 }
 
-const genSpaceStyle: GenerateStyle<SpaceToken> = (token) => {
+export const genSpaceStyle: any = (token) => {
   const { componentCls } = token;
 
   return {
-    [componentCls]: {
-      display: 'inline-flex',
-      '&-rtl': {
-        direction: 'rtl',
+    // [componentCls]: {
+    display: 'inline-flex',
+    '&>div': {
+      color: 'red',
+    },
+    '&-rtl': {
+      direction: 'rtl',
+    },
+    '&-vertical': {
+      flexDirection: 'column',
+    },
+    '&-align': {
+      flexDirection: 'column',
+      '&-center': {
+        alignItems: 'center',
       },
-      '&-vertical': {
-        flexDirection: 'column',
+      '&-start': {
+        alignItems: 'flex-start',
       },
-      '&-align': {
-        flexDirection: 'column',
-        '&-center': {
-          alignItems: 'center',
-        },
-        '&-start': {
-          alignItems: 'flex-start',
-        },
-        '&-end': {
-          alignItems: 'flex-end',
-        },
-        '&-baseline': {
-          alignItems: 'baseline',
-        },
+      '&-end': {
+        alignItems: 'flex-end',
       },
-      [`${componentCls}-item:empty`]: {
-        display: 'none',
+      '&-baseline': {
+        alignItems: 'baseline',
       },
     },
+
+    [`${componentCls}-item:empty`]: {
+      display: 'none',
+    },
+    // },
   };
 };
 

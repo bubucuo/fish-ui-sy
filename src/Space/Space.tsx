@@ -1,12 +1,14 @@
 import classnames from 'classnames';
-import type { SizeType } from 'fish-ui/config-provider/SizeContext';
-import { ConfigContext } from 'fish-ui/config-provider/context';
 import toArray from 'rc-util/lib/Children/toArray';
 import type { ReactNode } from 'react';
 import React from 'react';
+import { ConfigContext } from '../config-provider';
+import type { SizeType } from '../config-provider/SizeContext';
 import Item from './Item';
-import type { SpaceContextType } from './context';
-import { SpaceContextProvider } from './context';
+import { genSpaceStyle } from './style';
+
+// import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export type SpaceSize = SizeType | number;
 
@@ -25,87 +27,50 @@ export interface SpaceProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: { item: React.CSSProperties };
 }
 
-const Space = React.forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
+const Space = (props) => {
   const {
     // size = 'small',
-    // align,
     className,
-    rootClassName,
     children,
     direction = 'horizontal',
-    prefixCls: customizePrefixCls,
-    split,
-    style,
-    // wrap = false,
-    classNames: customClassNames,
-    styles,
     ...otherProps
   } = props;
 
-  const {
-    getPrefixCls,
-    space,
-    direction: directionConfig,
-  } = React.useContext(ConfigContext);
+  const { getPrefixCls } = React.useContext(ConfigContext);
 
-  const prefixCls = getPrefixCls('space', customizePrefixCls);
-
-  // const [wrapSSR, hashId] = useStyle(prefixCls);
+  const prefixCls = getPrefixCls('space');
 
   const cls = classnames(
     prefixCls,
-    space?.className,
     // hashId,
     `${prefixCls}-${direction}`,
-    {
-      [`${prefixCls}-rtl`]: directionConfig === 'rtl',
-      // [`${prefixCls}-align-${mergedAlign}`]: mergedAlign,
-      // [`${prefixCls}-gap-row-${verticalSize}`]: isPresetVerticalSize,
-      // [`${prefixCls}-gap-col-${horizontalSize}`]: isPresetHorizontalSize,
-    },
     className,
-    rootClassName,
   );
 
   const childNodes = toArray(children, { keepEmpty: true });
 
-  const itemClassName = classnames(
-    `${prefixCls}-item`,
-    customClassNames?.item ?? space?.classNames?.item,
-  );
+  const itemClassName = classnames(`${prefixCls}-item`);
 
   // Calculate latest one
-  let latestIndex = 0;
-  const nodes = childNodes.map((child: ReactNode, i: number) => {
-    if (child !== null && child !== undefined) {
-      latestIndex = i;
-    }
-
+  const nodes = childNodes.map<ReactNode>((child, i) => {
     const key = (child && child.key) || `${itemClassName}-${i}`;
 
     return (
-      <Item
-        className={itemClassName}
-        key={key}
-        index={i}
-        split={split}
-        style={styles?.item ?? space?.styles?.item}
-      >
+      <Item className={itemClassName} key={key}>
         {child}
       </Item>
     );
   });
 
-  const spaceContext = React.useMemo<SpaceContextType>(
-    () => ({ latestIndex }),
-    [latestIndex],
-  );
+  const _style = genSpaceStyle(prefixCls); // [prefixCls];
+
+  const SpaceNode = styled.div(_style);
 
   return (
-    <div ref={ref} className={cls} style={{ ...style }} {...otherProps}>
-      <SpaceContextProvider value={spaceContext}>{nodes}</SpaceContextProvider>
-    </div>
+    <SpaceNode className={cls} {...otherProps}>
+      {nodes}
+    </SpaceNode>
   );
-});
+};
 
 export default Space;

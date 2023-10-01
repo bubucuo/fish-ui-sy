@@ -1,4 +1,4 @@
-import type { SizeType } from 'fish-ui/config-provider/SizeContext';
+import type { SizeType } from '../config-provider/SizeContext';
 
 const ButtonTypes = ['default', 'primary', 'dashed', 'link', 'text'] as const;
 export type ButtonType = (typeof ButtonTypes)[number];
