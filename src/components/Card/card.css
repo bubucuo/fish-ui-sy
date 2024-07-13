@@ -1,0 +1,54 @@
+.fish-card {
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: dark;
+  font-size: 14px;
+  line-height: 22px;
+  list-style: none;
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.88);
+}
+
+.fish-card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 56px;
+  line-height: 26px;
+  font-weight: 600;
+  padding: 0 24px;
+  margin-bottom: -1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.88);
+}
+
+.fish-card-head-title {
+  box-sizing: border-box;
+  /* display: inline-block; */
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* box-sizing: border-box;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1; */
+}
+
+.fish-card-head-extra {
+  box-sizing: border-box;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fish-card-body {
+  box-sizing: border-box;
+  padding: 24px;
+}

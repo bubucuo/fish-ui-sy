@@ -13,5 +13,12 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  env: (config) => ({
+    ...config,
+    PREFIX: "fish",
+  }),
+  docs: {
+    autodocs: "tag",
+  },
 };
 export default config;
