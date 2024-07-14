@@ -7,10 +7,10 @@ import {
 import { useStyleRegister } from "@ant-design/cssinjs";
 
 import { ComponentTokenMap } from "../interface/components";
-import statisticToken, { merge } from "../../util/statistic";
+import statisticToken, { merge } from "../../_util/statistic";
 import useToken from "../useToken";
 import { useContext } from "react";
-import { ConfigContext } from "../../config-context";
+import { ConfigContext } from "../../config-provider";
 import { genCommonStyle, genLinkStyle } from "../../style";
 
 type ComponentToken<ComponentName extends OverrideComponent> = Exclude<
@@ -60,7 +60,19 @@ export default function genComponentStyleHook<
   getDefaultToken?:
     | null
     | OverrideTokenWithoutDerivative[ComponentName]
-    | ((token: GlobalToken) => OverrideTokenWithoutDerivative[ComponentName])
+    | ((token: GlobalToken) => OverrideTokenWithoutDerivative[ComponentName]),
+
+  options: {
+    resetStyle?: boolean;
+    /**
+     * Only use component style in client side. Ignore in SSR.
+     */
+    clientOnly?: boolean;
+    /**
+     * Set order of component style. Default is -999.
+     */
+    order?: number;
+  } = {}
 ) {
   const cells = (
     Array.isArray(componentName)
@@ -83,7 +95,10 @@ export default function genComponentStyleHook<
       hashId,
       nonce: () => csp?.nonce!,
       // antd is always at top of styles
-      order: -999,
+      clientOnly: options.clientOnly,
+
+      // antd is always at top of styles
+      order: options.order || -999,
     };
 
     // Generate style for all a tags in antd component.
@@ -145,7 +160,12 @@ export default function genComponentStyleHook<
             }
           );
           flush(component, mergedComponentToken);
-          return [genCommonStyle(token, prefixCls), styleInterpolation];
+          return [
+            options.resetStyle === false
+              ? null
+              : genCommonStyle(token, prefixCls),
+            styleInterpolation,
+          ];
         }
       ),
       hashId,

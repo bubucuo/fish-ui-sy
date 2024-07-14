@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { ConfigContext } from "../config-provider";
 import useStyle from "./style";
 
-export interface DividerProps {
+export interface FlexProps {
   prefixCls?: string;
   type?: "horizontal" | "vertical";
   orientation?: "left" | "right" | "center";
@@ -20,7 +20,7 @@ export interface DividerProps {
  *对不同章节的文本段落进行分割。
  * 对行内文字/链接进行分割，例如表格的操作列。
  */
-const Divider: React.FC<DividerProps> = ({
+const Flex: React.FC<FlexProps> = ({
   prefixCls: customizePrefixCls,
   type = "horizontal",
   orientation = "center",
@@ -95,4 +95,4 @@ const Divider: React.FC<DividerProps> = ({
   );
 };
 
-export default Divider;
+export default Flex;

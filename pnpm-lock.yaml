@@ -17,9 +17,21 @@ importers:
       '@ctrl/tinycolor':
         specifier: ^4.1.0
         version: 4.1.0
+      '@fluentui/accessibility':
+        specifier: ^0.66.5
+        version: 0.66.5
+      '@fluentui/react-bindings':
+        specifier: ^0.66.5
+        version: 0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)
       lit:
         specifier: ^3.1.4
         version: 3.1.4
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
+      rc-util:
+        specifier: ^5.43.0
+        version: 5.43.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -940,6 +952,48 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@fluentui/accessibility@0.66.5':
+    resolution: {integrity: sha512-W+QPr0oJ+YmBN8lDK0wps2D9FczlfWAHdQKJn85HN05mLxc2/Js2o/3N7oCKyFH6/B+h+ZheFt5RNa6UJd3IQQ==}
+
+  '@fluentui/dom-utilities@1.1.2':
+    resolution: {integrity: sha512-XqPS7l3YoMwxdNlaYF6S2Mp0K3FmVIOIy2K3YkMc+eRxu9wFK6emr2Q/3rBhtG5u/On37NExRT7/5CTLnoi9gw==}
+
+  '@fluentui/react-bindings@0.66.5':
+    resolution: {integrity: sha512-1kvkW2vi+lip9GT8CMlNewkJ/PcnZM0L+hFY+gU3Hz7yXrBAAEHMPbizFR0iPV6xs0BRIucVAPepa47gyTNRkg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+      react-dom: ^16.8.0 || ^17
+      scheduler: ^0.19.0 || ^0.20.0
+
+  '@fluentui/react-component-event-listener@0.66.5':
+    resolution: {integrity: sha512-vYwGD7qYZH5DiH/uHPCgAnSybFdc+jlFBmrOwDWTN7GD6FVFgfStyV5sar1YfTqUE/fAT95I7xI5QKevRU2szw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
+
+  '@fluentui/react-component-ref@0.66.5':
+    resolution: {integrity: sha512-0dKTIo6BQZZbfN/mwzkm9e+blI1Rh1fLurBDqFsgrKb9PAj+jvxWaCMnrYgLmYtkzP/0XbLW6hKEZUuNRUsXvQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
+
+  '@fluentui/react-northstar-fela-renderer@0.66.5':
+    resolution: {integrity: sha512-aJTl2btXp0l832IRBvXezZX/TVsQwkn0rwZ+8n8PvTcyf6yAOkxMH5OG6wPwBe2vmoTo5pQ63FeOmk4LXSlUYA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+      react-dom: ^16.8.0 || ^17
+
+  '@fluentui/react-northstar-styles-renderer@0.66.5':
+    resolution: {integrity: sha512-MNaF+1e2PoNbpuQ9hMXapAklW+vref75ajJvkxGDwfik22RbRjDs7pRRV/z2umAAIgksH3oK9RUk3cfxQE1Yqw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+
+  '@fluentui/state@0.66.5':
+    resolution: {integrity: sha512-ohQW+FSdCQZAhNtx4Tqu15K3dlPX3S4sOR4r6/9j1LysEn6R4uUGixIfDcxuNOt9TgixmmE1kJen8PFivVMYjw==}
+
+  '@fluentui/styles@0.66.5':
+    resolution: {integrity: sha512-9EAj2oS922qZ/FFag0tzaBmrnuoN0LKR1SS0MpZcpdB/62kHd+XbkHmpIH4KYVthbf1YrYQtuIoZNozfYD9iTQ==}
+
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -1505,6 +1559,9 @@ packages:
     resolution: {integrity: sha512-rMo01uPy9C7XxG7AFsxa8zLnWXTF8N3PYclekWSrurvhwiw1eW88mrKiAYe6s53AUY57nTRz8dJsuuXdkAhzCg==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
+  '@uifabric/set-version@7.0.24':
+    resolution: {integrity: sha512-t0Pt21dRqdC707/ConVJC0WvcQ/KF7tKLU8AZY7YdjgJpMHi1c0C427DB4jfUY19I92f60LOQyhJ4efH+KpFEg==}
+
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
@@ -1808,11 +1865,17 @@ packages:
     resolution: {integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==}
     engines: {node: '>=4'}
 
+  css-in-js-utils@3.1.0:
+    resolution: {integrity: sha512-fJAcud6B3rRu+KHYk+Bwf+WFL2MDCJJ1XG9x137tJQ0xYxor7XziQtuGFbWNdqrvF4Tk26O3H73nfVqXt/fW1A==}
+
   css-to-react-native@3.2.0:
     resolution: {integrity: sha512-e8RKaLXMOFii+02mOlqwjbD00KSEKqblnpO9e++1aXS1fPQOpS1YoqdVHBqPjHNoxeF2mimzVqawm2KCbEdtHQ==}
 
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
+
+  csstype@2.6.21:
+    resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
@@ -2039,11 +2102,48 @@ packages:
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
+  fast-loops@1.1.4:
+    resolution: {integrity: sha512-8dbd3XWoKCTms18ize6JmQF1SFnnfj5s0B7rRry22EofgMu7B6LKHVh+XfFqFGsqnbH54xgeO83PzpKI+ODhlg==}
+
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
 
   fd-package-json@1.2.0:
     resolution: {integrity: sha512-45LSPmWf+gC5tdCQMNH4s9Sr00bIkiD9aN7dc5hqkrEw1geRYyDQS1v1oMHAW3ysfxfndqGsrDREHHjNNbKUfA==}
+
+  fela-dom@11.7.0:
+    resolution: {integrity: sha512-mYboADGGQc/EihhyPOs8Xo2aJ0cOQI4q3+aWQ11KPzaCAT3TTVdXuTslT5QeXoE6cT6nS77GvvrRzXb3U/gY6Q==}
+
+  fela-plugin-custom-property@10.8.2:
+    resolution: {integrity: sha512-SFbuMRQpetEUYwMsG0ngZrdEB7N7ytH+jsXeWt54GKhdz68XcvbAEIoc5vWSPiNVBKH47jV3+dwXjhejd5AdaQ==}
+    peerDependencies:
+      fela: ^10.0.0
+
+  fela-plugin-embedded@10.8.2:
+    resolution: {integrity: sha512-HeLyDJHQgpBEMbWjsCES1Jtptawtaqnp0Ml3zKebPMrryCQj4j0k4VdyzcS+QzE4M0JD1r0FYhKla+mpuMP5Qw==}
+
+  fela-plugin-fallback-value@10.8.2:
+    resolution: {integrity: sha512-pjNQ4TJVJz8rDS8kEB7afRDHelQFzi0kIOhLSR0/LWLLFC7CfaQ3Vop9/w5Ot7iJtH8oR1dAxSQEyk497QcyPw==}
+
+  fela-plugin-placeholder-prefixer@10.8.2:
+    resolution: {integrity: sha512-5Uh1ceC03mnfZanlxb4Y4F3MJNoqcReb5lFhme9Yuh74gwFYUAFgsA/vjE2FXfJ8DG4OP69cB/JEGc5cBRtjAg==}
+
+  fela-plugin-rtl@10.8.2:
+    resolution: {integrity: sha512-Xc3uYTNU0TponAtMwqfJQc/F33gACCCPr7QOMqpJurlYUU9VaYhchgs7YMocqns6kBPRGrYc0mYiQqNCfpKsjw==}
+
+  fela-tools@10.8.2:
+    resolution: {integrity: sha512-9HVPA7PABxCh8ybiDlhhVKuFlVeFazmhthlf5CybiFcxh6DVKDEacYsFdXSC7NGJW2i4cWACiy7pjUvOyvqhRQ==}
+    peerDependencies:
+      fela: ^10.0.0
+
+  fela-utils@10.8.2:
+    resolution: {integrity: sha512-RmoDOIby14Zb3Xn03noLolyMC2528xcNO5KcNCaznyByd1Acq8DnvQn91Ph9nBLcLqdC1rGme5HwRcrCOHG+kA==}
+
+  fela-utils@11.7.0:
+    resolution: {integrity: sha512-s/3QJtkCesH+2/yJDpedHVAvMgKy9hSt2++6l7Xjio5BixiUnvkwbqdCV/fcAb4E3reJLNzYeatgPdcw4HVXRQ==}
+
+  fela@10.8.2:
+    resolution: {integrity: sha512-rdF2h6U9gBhLged2WpOE43zqDG3f9rV7PNmcCoTuMIoKZqN0tYsc71nJRS7aNQtk+kRB5VsvMpoK0JGbs4s0qA==}
 
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -2246,6 +2346,9 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
+  hyphenate-style-name@1.1.0:
+    resolution: {integrity: sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==}
+
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -2275,6 +2378,9 @@ packages:
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+
+  inline-style-expand-shorthand@1.6.0:
+    resolution: {integrity: sha512-REormb3TCk/CIeL5/Q1rdHYM9tW8YKGKzbvgAH4IXrDsJmq9BnV69yhIGGMzV2IRkR/J6MuLNhY7UfoIJjunog==}
 
   ipaddr.js@1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
@@ -2957,6 +3063,9 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  rtl-css-js@1.16.1:
+    resolution: {integrity: sha512-lRQgou1mu19e+Ya0LsTvKrVJ5TYUbqCVPAiImX3UfLTenarvPUl1QFdvu5Z3PYmHT9RCcwIfbjRQBntExyj3Zg==}
+
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
@@ -3034,6 +3143,10 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
+  sort-css-media-queries@1.5.4:
+    resolution: {integrity: sha512-YP5W/h4Sid/YP7Lp87ejJ5jP13/Mtqt2vx33XyhO+IAugKlufRPbOrPlIiEUuxmpNBSBd3EeeQpFhdu3RfI2Ag==}
+    engines: {node: '>= 6.3.0'}
+
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
@@ -3097,6 +3210,9 @@ packages:
     peerDependencies:
       react: '>= 16.8.0'
       react-dom: '>= 16.8.0'
+
+  stylis@3.5.4:
+    resolution: {integrity: sha512-8/3pSmthWM7lsPBKv7NXkzn2Uc9W7NotcwGNpJaa3k7WMM1XDCA4MgT5k/8BIexd5ydZdboXtU90XH9Ec4Bv/Q==}
 
   stylis@4.3.2:
     resolution: {integrity: sha512-bhtUjWd/z6ltJiQwg0dUfxEJ+W+jdqQd8TbWLWyeIJHlnsqmGLRFFd8e5mA0AZi/zx90smXRlN66YMTcaSFifg==}
@@ -4358,6 +4474,84 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@fluentui/accessibility@0.66.5':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      lodash: 4.17.21
+
+  '@fluentui/dom-utilities@1.1.2':
+    dependencies:
+      '@uifabric/set-version': 7.0.24
+      tslib: 1.14.1
+
+  '@fluentui/react-bindings@0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      '@fluentui/accessibility': 0.66.5
+      '@fluentui/dom-utilities': 1.1.2
+      '@fluentui/react-component-event-listener': 0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@fluentui/react-component-ref': 0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@fluentui/react-northstar-fela-renderer': 0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@fluentui/react-northstar-styles-renderer': 0.66.5(react@18.3.1)
+      '@fluentui/state': 0.66.5
+      '@fluentui/styles': 0.66.5
+      classnames: 2.5.1
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-is: 17.0.2
+      scheduler: 0.23.2
+
+  '@fluentui/react-component-event-listener@0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@fluentui/react-component-ref@0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-is: 17.0.2
+
+  '@fluentui/react-northstar-fela-renderer@0.66.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      '@fluentui/react-northstar-styles-renderer': 0.66.5(react@18.3.1)
+      '@fluentui/styles': 0.66.5
+      css-in-js-utils: 3.1.0
+      fela: 10.8.2
+      fela-dom: 11.7.0
+      fela-plugin-embedded: 10.8.2
+      fela-plugin-fallback-value: 10.8.2
+      fela-plugin-placeholder-prefixer: 10.8.2(fela@10.8.2)
+      fela-plugin-rtl: 10.8.2
+      fela-tools: 10.8.2(fela@10.8.2)
+      fela-utils: 11.7.0
+      inline-style-expand-shorthand: 1.6.0
+      lodash: 4.17.21
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      stylis: 3.5.4
+
+  '@fluentui/react-northstar-styles-renderer@0.66.5(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      '@fluentui/styles': 0.66.5
+      react: 18.3.1
+
+  '@fluentui/state@0.66.5':
+    dependencies:
+      '@babel/runtime': 7.24.8
+
+  '@fluentui/styles@0.66.5':
+    dependencies:
+      '@babel/runtime': 7.24.8
+      csstype: 3.1.3
+      lodash: 4.17.21
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -5063,6 +5257,10 @@ snapshots:
       '@typescript-eslint/types': 7.16.0
       eslint-visitor-keys: 3.4.3
 
+  '@uifabric/set-version@7.0.24':
+    dependencies:
+      tslib: 1.14.1
+
   '@ungap/structured-clone@1.2.0': {}
 
   '@vitejs/plugin-react@4.3.1(vite@5.3.3(@types/node@20.14.10))':
@@ -5386,6 +5584,10 @@ snapshots:
 
   css-color-keywords@1.0.0: {}
 
+  css-in-js-utils@3.1.0:
+    dependencies:
+      hyphenate-style-name: 1.1.0
+
   css-to-react-native@3.2.0:
     dependencies:
       camelize: 1.0.1
@@ -5393,6 +5595,8 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   css.escape@1.5.1: {}
+
+  csstype@2.6.21: {}
 
   csstype@3.1.3: {}
 
@@ -5687,6 +5891,8 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
+  fast-loops@1.1.4: {}
+
   fastq@1.17.1:
     dependencies:
       reusify: 1.0.4
@@ -5694,6 +5900,65 @@ snapshots:
   fd-package-json@1.2.0:
     dependencies:
       walk-up-path: 3.0.1
+
+  fela-dom@11.7.0:
+    dependencies:
+      css-in-js-utils: 3.1.0
+      fast-loops: 1.1.4
+      fela-utils: 11.7.0
+      sort-css-media-queries: 1.5.4
+
+  fela-plugin-custom-property@10.8.2(fela@10.8.2):
+    dependencies:
+      css-in-js-utils: 3.1.0
+      fela: 10.8.2
+      isobject: 3.0.1
+
+  fela-plugin-embedded@10.8.2:
+    dependencies:
+      fast-loops: 1.1.4
+      isobject: 3.0.1
+
+  fela-plugin-fallback-value@10.8.2:
+    dependencies:
+      css-in-js-utils: 3.1.0
+      isobject: 3.0.1
+
+  fela-plugin-placeholder-prefixer@10.8.2(fela@10.8.2):
+    dependencies:
+      fast-loops: 1.1.4
+      fela-plugin-custom-property: 10.8.2(fela@10.8.2)
+    transitivePeerDependencies:
+      - fela
+
+  fela-plugin-rtl@10.8.2:
+    dependencies:
+      rtl-css-js: 1.16.1
+
+  fela-tools@10.8.2(fela@10.8.2):
+    dependencies:
+      css-in-js-utils: 3.1.0
+      fast-loops: 1.1.4
+      fela: 10.8.2
+      fela-utils: 10.8.2
+
+  fela-utils@10.8.2:
+    dependencies:
+      css-in-js-utils: 3.1.0
+      fast-loops: 1.1.4
+
+  fela-utils@11.7.0:
+    dependencies:
+      css-in-js-utils: 3.1.0
+      fast-loops: 1.1.4
+
+  fela@10.8.2:
+    dependencies:
+      css-in-js-utils: 3.1.0
+      csstype: 2.6.21
+      fast-loops: 1.1.4
+      fela-utils: 10.8.2
+      isobject: 3.0.1
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -5911,6 +6176,8 @@ snapshots:
 
   human-signals@5.0.0: {}
 
+  hyphenate-style-name@1.1.0: {}
+
   iconv-lite@0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -5934,6 +6201,8 @@ snapshots:
       wrappy: 1.0.2
 
   inherits@2.0.4: {}
+
+  inline-style-expand-shorthand@1.6.0: {}
 
   ipaddr.js@1.9.1: {}
 
@@ -6599,6 +6868,10 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.18.1
       fsevents: 2.3.3
 
+  rtl-css-js@1.16.1:
+    dependencies:
+      '@babel/runtime': 7.24.8
+
   run-parallel@1.2.0:
     dependencies:
       queue-microtask: 1.2.3
@@ -6683,6 +6956,8 @@ snapshots:
   slash@3.0.0: {}
 
   slash@5.1.0: {}
+
+  sort-css-media-queries@1.5.4: {}
 
   source-map-js@1.2.0: {}
 
@@ -6774,6 +7049,8 @@ snapshots:
       shallowequal: 1.1.0
       stylis: 4.3.2
       tslib: 2.6.2
+
+  stylis@3.5.4: {}
 
   stylis@4.3.2: {}
 

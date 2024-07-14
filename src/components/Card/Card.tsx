@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { PREFIX } from "../util/index";
+import { PREFIX } from "../_util/index";
 import "./card.css";
 
 export interface CardProps {
