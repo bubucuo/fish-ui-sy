@@ -11,7 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-.yarn
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*storybook.log
+.yarn/*
