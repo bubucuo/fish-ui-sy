@@ -1,8 +1,7 @@
 export { default as Button } from "./Button/Button";
 export type { ButtonProps } from "./Button/Button";
 
-export { default as Divider } from "./Divider/";
-export type { DividerProps } from "./Divider/";
+export * from "./Divider/index";
 
 export { default as Flex } from "./Flex";
 export type { FlexProps } from "./Flex";
