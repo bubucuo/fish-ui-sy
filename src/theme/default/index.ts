@@ -5,11 +5,12 @@ import genSizeMapToken from "../shared/genSizeMapToken";
 import genColorMapToken from "../shared/genColorMapToken";
 import genCommonMapToken from "../shared/genCommonMapToken";
 import genFontMapToken from "../shared/genFontMapToken";
-import { PresetColorType, SeedToken } from "../internal";
+// import { PresetColorType, SeedToken } from "../internal";
 import { MapToken } from "../interface/maps";
 import { defaultPresetColors } from "../themes/seed";
-import { ColorPalettes } from "../interface";
+import { ColorPalettes, SeedToken } from "../interface";
 import { generateColorPalettes, generateNeutralColorPalettes } from "./colors";
+import { PresetColorType } from '../interface/presetColors';
 
 export default function derivative(token: SeedToken): MapToken {
   const colorPalettes = Object.keys(defaultPresetColors)

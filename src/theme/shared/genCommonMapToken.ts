@@ -1,4 +1,5 @@
-import type { CommonMapToken, SeedToken } from '../../interface';
+import { SeedToken } from '../interface';
+import { CommonMapToken } from '../interface/maps';
 import genRadius from './genRadius';
 
 export default function genCommonMapToken(token: SeedToken): CommonMapToken {

@@ -5,6 +5,10 @@ export interface ComponentStyleConfig {
   style?: React.CSSProperties;
 }
 
+export interface CSPConfig {
+  nonce?: string;
+}
+
 export interface ConfigConsumerProps {
   getTargetContainer?: () => HTMLElement;
   getPopupContainer?: (triggerNode?: HTMLElement) => HTMLElement;
@@ -15,6 +19,8 @@ export interface ConfigConsumerProps {
   divider?: ComponentStyleConfig;
 
   direction?: "ltr" | "rtl" | undefined;
+  csp?: CSPConfig;
+
 }
 
 const defaultGetPrefixCls = (
