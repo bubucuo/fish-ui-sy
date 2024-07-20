@@ -1,11 +1,9 @@
-import { mergeClasses, shorthands, makeStyles } from '@griffel/react';
-import { tokens } from '@fluentui/react-theme';
-import { DividerSlots, DividerState } from './Divider.types';
-import type { SlotClassNames } from '@fluentui/react-utilities';
+import {  shorthands, makeStyles } from '@griffel/react';
+// import {   DividerState } from './Divider.types';
 
-export const dividerClassNames: SlotClassNames<DividerSlots> = {
-  root: 'fui-Divider',
-  wrapper: 'fui-Divider__wrapper',
+export const dividerClassNames = {
+  root: 'fish-ui-Divider',
+  wrapper: 'fish-ui-Divider__wrapper',
 };
 
 const contentSpacing = '12px';
@@ -13,7 +11,10 @@ const insetSpacing = '12px';
 const maxStartEndLength = '8px';
 const minStartEndLength = '8px;';
 
-const useBaseStyles = makeStyles({
+const borderColor = 'red';
+const borderWidth = '1px';
+
+export const useBaseStyles = makeStyles({
   // Base styles
   base: {
     alignItems: 'center',
@@ -23,22 +24,30 @@ const useBaseStyles = makeStyles({
     flexGrow: 1,
     position: 'relative',
 
-    fontFamily: tokens.fontFamilyBase,
-    fontSize: tokens.fontSizeBase200,
-    fontWeight: tokens.fontWeightRegular,
-    lineHeight: tokens.lineHeightBase200,
     textAlign: 'center',
+color:'red',
+
+
+    // Border styles
+// border:'1px solid red',
 
     '::before': {
+      content: '""',
       boxSizing: 'border-box',
       display: 'flex',
       flexGrow: 1,
+      ...shorthands.borderColor(borderColor),
+
     },
 
     '::after': {
       boxSizing: 'border-box',
+      content: '""',
+
       display: 'flex',
       flexGrow: 1,
+      ...shorthands.borderColor(borderColor),
+
     },
   },
 
@@ -75,67 +84,21 @@ const useBaseStyles = makeStyles({
     },
   },
 
-  // Appearance variations
-  brand: {
-    color: tokens.colorBrandForeground1,
-
-    '::before': {
-      ...shorthands.borderColor(tokens.colorBrandStroke1),
-    },
-
-    '::after': {
-      ...shorthands.borderColor(tokens.colorBrandStroke1),
-    },
-  },
-  default: {
-    color: tokens.colorNeutralForeground2,
-
-    '::before': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke2),
-    },
-
-    '::after': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke2),
-    },
-  },
-  subtle: {
-    color: tokens.colorNeutralForeground3,
-
-    '::before': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke3),
-    },
-
-    '::after': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke3),
-    },
-  },
-  strong: {
-    color: tokens.colorNeutralForeground1,
-
-    '::before': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke1),
-    },
-
-    '::after': {
-      ...shorthands.borderColor(tokens.colorNeutralStroke1),
-    },
-  },
 });
 
-const useHorizontalStyles = makeStyles({
+export const useHorizontalStyles = makeStyles({
   // Base styles
   base: {
     width: '100%',
-
     '::before': {
       borderTopStyle: 'solid',
-      borderTopWidth: tokens.strokeWidthThin,
+      borderTopWidth: borderWidth,
       minWidth: minStartEndLength,
     },
 
     '::after': {
       borderTopStyle: 'solid',
-      borderTopWidth: tokens.strokeWidthThin,
+      borderTopWidth: borderWidth,
       minWidth: minStartEndLength,
     },
   },
@@ -178,7 +141,7 @@ const useHorizontalStyles = makeStyles({
   },
 });
 
-const useVerticalStyles = makeStyles({
+export const useVerticalStyles = makeStyles({
   // Base styles
   base: {
     flexDirection: 'column',
@@ -186,13 +149,13 @@ const useVerticalStyles = makeStyles({
 
     '::before': {
       borderRightStyle: 'solid',
-      borderRightWidth: tokens.strokeWidthThin,
+      borderRightWidth:borderWidth,
       minHeight: minStartEndLength,
     },
 
     '::after': {
       borderRightStyle: 'solid',
-      borderRightWidth: tokens.strokeWidthThin,
+      borderRightWidth:borderWidth,
       minHeight: minStartEndLength,
     },
   },
@@ -239,45 +202,3 @@ const useVerticalStyles = makeStyles({
     },
   },
 });
-
-export const useDividerStyles_unstable = (state: DividerState): DividerState => {
-  'use no memo';
-
-  const baseStyles = useBaseStyles();
-  const horizontalStyles = useHorizontalStyles();
-  const verticalStyles = useVerticalStyles();
-
-  const { alignContent, appearance, inset, vertical } = state;
-
-  state.root.className = mergeClasses(
-    dividerClassNames.root,
-
-    // Base styles
-    baseStyles.base,
-    baseStyles[alignContent],
-    appearance && baseStyles[appearance],
-
-    // Horizontal styles
-    !vertical && horizontalStyles.base,
-    !vertical && inset && horizontalStyles.inset,
-    !vertical && horizontalStyles[alignContent],
-
-    // Vertical styles
-    vertical && verticalStyles.base,
-    vertical && inset && verticalStyles.inset,
-    vertical && verticalStyles[alignContent],
-    vertical && state.root.children !== undefined && verticalStyles.withChildren,
-
-    // Childless styles
-    state.root.children === undefined && baseStyles.childless,
-
-    // User provided class name
-    state.root.className,
-  );
-
-  if (state.wrapper) {
-    state.wrapper.className = mergeClasses(dividerClassNames.wrapper, state.wrapper.className);
-  }
-
-  return state;
-};
