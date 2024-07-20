@@ -1,52 +1,16 @@
-// {
-//   "compilerOptions": {
-//     "strict": true,
-//     "declaration": true,
-//     "skipLibCheck": true,
-//     "esModuleInterop": true,
-//     "jsx": "react",
-//     "baseUrl": "./",
-//     "paths": {
-//       "@@/*": [".dumi/tmp/*"],
-//       "fish-ui": ["src"],
-//       "fish-ui/*": ["src/*", "*"]
-//     }
-//   },
-//   "include": [".dumirc.ts", "src/**/*"]
-// }
-
 {
   "compilerOptions": {
-    "strict": false,
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "fish-ui": ["src"],
       "fish-ui/*": ["src/*", "*"]
-
-      // "@@/*": [".dumi/tmp/*"],
-      // "fish": ["components/index.ts"],
-      // "fish/es/*": ["components/*"],
-      // "fish/lib/*": ["components/*"],
-      // "fish/locale/*": ["components/locale/*"]
-    },
-    "strictNullChecks": true,
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "jsx": "react",
-    "jsxFactory": "React.createElement",
-    "jsxFragmentFactory": "React.Fragment",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "target": "es6",
-    "lib": ["dom", "es2017"],
-    "skipLibCheck": true,
-    "stripInternal": true,
-    "resolvePackageJsonExports": true
+    }
   },
-  "include": [".dumirc.ts", "**/*"],
-  "exclude": ["node_modules", "lib", "es"]
+  "include": [".dumirc.ts", "src/**/*"]
 }

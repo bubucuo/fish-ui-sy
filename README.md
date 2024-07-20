@@ -31,6 +31,9 @@ $ pnpm run build:watch
 # build docs
 $ pnpm run docs:build
 
+# Locally preview the production build.
+$ pnpm run docs:preview
+
 # check your project for potential problems
 $ pnpm run doctor
 ```

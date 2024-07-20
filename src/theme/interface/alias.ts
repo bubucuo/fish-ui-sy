@@ -1,5 +1,5 @@
-import type * as React from 'react';
-import type { MapToken } from './maps';
+import type * as React from "react";
+import type { MapToken } from "./maps";
 
 // ======================================================================
 // ==                           Alias Token                            ==
@@ -427,21 +427,21 @@ export interface AliasToken extends MapToken {
    * @desc 控制链接文本的装饰样式。
    * @descEN Control the text decoration style of a link.
    */
-  linkDecoration: React.CSSProperties['textDecoration'];
+  linkDecoration: React.CSSProperties["textDecoration"];
   /**
    * @nameZH 链接鼠标悬浮时文本装饰
    * @nameEN Link text decoration on mouse hover
    * @desc 控制链接鼠标悬浮时文本的装饰样式。
    * @descEN Control the text decoration style of a link on mouse hover.
    */
-  linkHoverDecoration: React.CSSProperties['textDecoration'];
+  linkHoverDecoration: React.CSSProperties["textDecoration"];
   /**
    * @nameZH 链接聚焦时文本装饰
    * @nameEN Link text decoration on focus
    * @desc 控制链接聚焦时文本的装饰样式。
    * @descEN Control the text decoration style of a link on focus.
    */
-  linkFocusDecoration: React.CSSProperties['textDecoration'];
+  linkFocusDecoration: React.CSSProperties["textDecoration"];
 
   /**
    * @nameZH 控制水平内间距

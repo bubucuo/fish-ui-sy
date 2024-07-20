@@ -1,19 +1,25 @@
-import type { Theme } from '@ant-design/cssinjs';
-import { useCacheToken } from '@ant-design/cssinjs';
-import React from 'react';
-import version from '../version';
-import type { DesignTokenProviderProps } from './context';
-import { DesignTokenContext, defaultTheme } from './context';
-import type { AliasToken, GlobalToken, MapToken, SeedToken } from './interface';
-import defaultSeedToken from './themes/seed';
-import formatToken from './util/alias';
+import type { Theme } from "@ant-design/cssinjs";
+import { useCacheToken } from "@ant-design/cssinjs";
+import {
+  DesignTokenContext,
+  DesignTokenProviderProps,
+  defaultTheme,
+} from "./context";
+import { AliasToken } from "./interface/alias";
+import { SeedToken } from "./internal";
+import formatToken from "./util/alias";
+import { GlobalToken } from "./interface";
+import { MapToken } from "./interface/maps";
+import React from "react";
+import defaultSeedToken from "./themes/seed";
+import version from "../version";
 
 export const getComputedToken = (
   originToken: SeedToken,
-  overrideToken: DesignTokenProviderProps['components'] & {
+  overrideToken: DesignTokenProviderProps["components"] & {
     override?: Partial<AliasToken>;
   },
-  theme: Theme<any, any>,
+  theme: Theme<any, any>
 ) => {
   const derivativeToken = theme.getDerivativeToken(originToken);
 
@@ -41,7 +47,7 @@ export const getComputedToken = (
           {
             override: componentTokens,
           },
-          componentTheme,
+          componentTheme
         );
       }
       mergedDerivativeToken[key] = mergedComponentToken;
@@ -64,7 +70,7 @@ export default function useToken(): [
     components,
   } = React.useContext(DesignTokenContext);
 
-  const salt = `${version}-${hashed || ''}`;
+  const salt = `${version}-${hashed || ""}`;
 
   const mergedTheme = theme || defaultTheme;
 
@@ -78,8 +84,8 @@ export default function useToken(): [
       // formatToken will not be consumed after 1.15.0 with getComputedToken.
       // But token will break if @ant-design/cssinjs is under 1.15.0 without it
       formatToken,
-    },
+    }
   );
 
-  return [mergedTheme, token, hashed ? hashId : ''];
+  return [mergedTheme, token, hashed ? hashId : ""];
 }

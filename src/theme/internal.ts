@@ -1,42 +1,15 @@
-import { useStyleRegister } from '@ant-design/cssinjs';
-
 import type {
-  AliasToken,
-  GenerateStyle,
   PresetColorKey,
   PresetColorType,
   SeedToken,
   UseComponentStyleResult,
-} from './interface';
-import { PresetColors } from './interface';
-import useToken from './useToken';
-import type { FullToken } from './util/genComponentStyleHook';
-import genComponentStyleHook, {
-  genSubStyleComponent,
-} from './util/genComponentStyleHook';
-import genPresetColor from './util/genPresetColor';
-import statisticToken, { merge as mergeToken } from './util/statistic';
-import useResetIconStyle from './util/useResetIconStyle';
+} from "./interface";
+import { PresetColors } from "./interface";
+import { FullToken } from "./util/genComponentStyleHook";
 
-export { DesignTokenContext, defaultConfig } from './context';
-export {
-  PresetColors,
-  genComponentStyleHook,
-  genPresetColor,
-  genSubStyleComponent,
-  mergeToken,
-  statisticToken,
-  // hooks
-  useResetIconStyle,
-  useStyleRegister,
-  useToken,
-};
+export { PresetColors };
 export type {
-  AliasToken,
-  // FIXME: Remove this type
-  AliasToken as DerivativeToken,
   FullToken,
-  GenerateStyle,
   PresetColorKey,
   PresetColorType,
   SeedToken,

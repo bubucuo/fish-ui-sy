@@ -1,4 +1,4 @@
-import type { ColorPalettes } from '../presetColors';
+import type { ColorPalettes, LegacyColorPalettes } from '../presetColors';
 import type { SeedToken } from '../seeds';
 import type { ColorMapToken } from './colors';
 import type { FontMapToken } from './font';
@@ -36,6 +36,7 @@ export interface CommonMapToken extends StyleMapToken {
 
 export interface MapToken
   extends SeedToken,
+    LegacyColorPalettes,
     ColorPalettes,
     ColorMapToken,
     SizeMapToken,

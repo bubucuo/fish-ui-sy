@@ -5,12 +5,7 @@ function isStableColor(color: number): boolean {
 }
 
 function getAlphaColor(frontColor: string, backgroundColor: string): string {
-  const {
-    r: fR,
-    g: fG,
-    b: fB,
-    a: originAlpha,
-  } = new TinyColor(frontColor).toRgb();
+  const { r: fR, g: fG, b: fB, a: originAlpha } = new TinyColor(frontColor).toRgb();
   if (originAlpha < 1) {
     return frontColor;
   }
@@ -22,12 +17,7 @@ function getAlphaColor(frontColor: string, backgroundColor: string): string {
     const g = Math.round((fG - bG * (1 - fA)) / fA);
     const b = Math.round((fB - bB * (1 - fA)) / fA);
     if (isStableColor(r) && isStableColor(g) && isStableColor(b)) {
-      return new TinyColor({
-        r,
-        g,
-        b,
-        a: Math.round(fA * 100) / 100,
-      }).toRgbString();
+      return new TinyColor({ r, g, b, a: Math.round(fA * 100) / 100 }).toRgbString();
     }
   }
 
