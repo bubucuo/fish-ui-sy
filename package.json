@@ -68,11 +68,17 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "storybook": "storybook dev -p 6006",
+    "storybook-docs": "storybook dev --docs",
+    "build-storybook-docs": "storybook build --docs",
     "sk": "pnpm run storybook",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "compile": "node ./scripts/compile",
+    "compile:benchmark": "rollup -c rollup.bench.js",
+    "clean": "node ./scripts/clean dist",
+    "generate-api": "api-extractor run --local",
+    "build": "pnpm compile && pnpm rollup -c && pnpm generate-api"
   },
   "eslintConfig": {
     "extends": [
@@ -107,7 +113,14 @@
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.2.5",
-    "webpack": "^5.93.0"
+    "webpack": "^5.93.0",
+    "rollup": "2.71.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-esbuild": "6.1.1",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "5.3.1",
+    "rollup-plugin-transform-tagged-template": "0.0.3",
+    "@rollup/plugin-node-resolve": "13.3.0"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
