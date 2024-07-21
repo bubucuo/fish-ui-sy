@@ -1,7 +1,9 @@
 {
-  "name": "fish-fish",
-  "version": "0.0.0",
+  "name": "fish-ui-sy",
+  "version": "0.1.0",
+  "description": "Build Your Own React UI Library",
   "type": "module",
+  "author": "bubucuo",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -14,11 +16,13 @@
   },
   "dependencies": {
     "@griffel/react": "^1.5.24",
+    "fish-ui-sy": "^0.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.2.4",
     "@storybook/addon-interactions": "^8.2.4",
     "@storybook/addon-links": "^8.2.4",
@@ -27,6 +31,7 @@
     "@storybook/react": "^8.2.4",
     "@storybook/react-vite": "^8.2.4",
     "@storybook/test": "^8.2.4",
+    "@types/node": "^20.14.11",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
@@ -39,5 +44,14 @@
     "storybook": "^8.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
-  }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ]
 }

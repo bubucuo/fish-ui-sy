@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/react";
 import { Divider } from "..";
+// import { Divider } from "fish-ui-sy";
 import { makeStyles, shorthands } from "@griffel/react";
 
 export default {
