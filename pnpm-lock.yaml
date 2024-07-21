@@ -11,15 +11,15 @@ importers:
       '@griffel/react':
         specifier: ^1.5.24
         version: 1.5.24(react@18.3.1)
-      fish-ui-sy:
-        specifier: ^0.0.0
-        version: 0.0.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      tslib:
+        specifier: ^2.6.3
+        version: 2.6.3
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.6.1
@@ -2274,9 +2274,6 @@ packages:
   find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
     engines: {node: '>=10'}
-
-  fish-ui-sy@0.0.0:
-    resolution: {integrity: sha512-T0+cg0hoxtE6LU5Q2H4STN1yMmBcQ9sDuB31MFq5jW8ro49IvJGAcnU56jHJw5bWOX6jaSG1C+TUVN+kPO8+5A==}
 
   flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
@@ -6573,12 +6570,6 @@ snapshots:
     dependencies:
       locate-path: 6.0.0
       path-exists: 4.0.0
-
-  fish-ui-sy@0.0.0:
-    dependencies:
-      '@griffel/react': 1.5.24(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   flat-cache@3.2.0:
     dependencies:
