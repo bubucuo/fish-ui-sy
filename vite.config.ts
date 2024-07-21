@@ -21,14 +21,14 @@ function resolve(str: string) {
 export default defineConfig({
   plugins: [
     react(),
-    typescript({
-      target: 'es2015',
-      rootDir: resolve("src/components"),
-      declaration: true,
-      declarationDir: resolve("dist"),
-      exclude:resolve("node_modules"),
-      allowSyntheticDefaultImports: true,
-    }),
+    // typescript({
+    //   target: 'es2015',
+    //   rootDir: resolve("src/components"),
+    //   declaration: true,
+    //   declarationDir: resolve("dist"),
+    //   exclude:resolve("node_modules"),
+    //   allowSyntheticDefaultImports: true,
+    // }),
   ],
   build: {
     outDir: "dist",
