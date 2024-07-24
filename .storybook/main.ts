@@ -1,7 +1,10 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)", //
+  ],
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
@@ -17,5 +20,8 @@ const config: StorybookConfig = {
     //👇 See the table below for the list of supported options
     defaultName: "Documentation",
   },
+  // 设置stories没有export default
+
+  //
 };
 export default config;

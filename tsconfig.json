@@ -17,7 +17,10 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "paths": {
+      "@/*": ["./src/*", "./src/components/*"]
+    },
   },
   "include": ["src"],
   "exclude": ["node_modules", "src/components/**/*.stories.*"]

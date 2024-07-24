@@ -1,7 +1,7 @@
+import React from "react";
 import { Meta } from "@storybook/react";
-import { Divider } from "..";
-// import { Divider } from "fish-ui-sy";
 import { makeStyles, shorthands } from "@griffel/react";
+import { Divider, tokens } from "@/index";
 
 export default {
   title: "布局/Divider 分割线",
@@ -60,6 +60,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyItems: "center",
     minHeight: "96px",
+    backgroundColor: tokens.colorNeutralBackground1,
   },
   customHeightExample: {
     display: "flex",

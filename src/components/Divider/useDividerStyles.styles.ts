@@ -1,64 +1,81 @@
-import {  shorthands, makeStyles } from '@griffel/react';
+import { tokens } from "@/index";
+import { shorthands, makeStyles } from "@griffel/react";
 // import {   DividerState } from './Divider.types';
 
 export const dividerClassNames = {
-  root: 'fish-ui-Divider',
-  wrapper: 'fish-ui-Divider__wrapper',
+  root: "fish-ui-Divider",
+  wrapper: "fish-ui-Divider__wrapper",
 };
 
-const contentSpacing = '12px';
-const insetSpacing = '12px';
-const maxStartEndLength = '8px';
-const minStartEndLength = '8px;';
+const contentSpacing = "12px";
+const insetSpacing = "12px";
+const maxStartEndLength = "8px";
+const minStartEndLength = "8px;";
 
-const borderColor = 'red';
-const borderWidth = '1px';
+const borderColor = "red";
+const borderWidth = "1px";
+
+// console.log(
+//   "%c [  ]-19",
+//   "font-size:13px; background:pink; color:#bf2c9f;",
+//   tokens.colorNeutralForeground3BrandHover
+// );
 
 export const useBaseStyles = makeStyles({
   // Base styles
   base: {
-    alignItems: 'center',
-    boxSizing: 'border-box',
-    display: 'flex',
-    flexDirection: 'row',
+    alignItems: "center",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "row",
     flexGrow: 1,
-    position: 'relative',
+    position: "relative",
 
-    textAlign: 'center',
-color:'red',
+    // fontFamily: tokens.fontFamilyBase,
+    // fontSize: tokens.fontSizeBase200,
+    // fontWeight: tokens.fontWeightRegular,
+    // lineHeight: tokens.lineHeightBase200,
 
+    textAlign: "center",
+    // color:'orange',
+
+    // color: tokens.colorNeutralForeground3BrandHover,
 
     // Border styles
-// border:'1px solid red',
+    // border:'1px solid red',
 
-    '::before': {
+    // color: tokens.colorBrandForeground1,
+
+    "::before": {
       content: '""',
-      boxSizing: 'border-box',
-      display: 'flex',
+      boxSizing: "border-box",
+      display: "flex",
       flexGrow: 1,
-      ...shorthands.borderColor(borderColor),
+      // ...shorthands.borderColor(tokens.colorBrandStroke1),
 
+      ...shorthands.borderColor(borderColor),
     },
 
-    '::after': {
-      boxSizing: 'border-box',
+    "::after": {
+      boxSizing: "border-box",
       content: '""',
 
-      display: 'flex',
+      display: "flex",
       flexGrow: 1,
-      ...shorthands.borderColor(borderColor),
+      // ...shorthands.borderColor(tokens.colorBrandStroke1),
 
+      ...shorthands.borderColor(borderColor),
     },
   },
 
   // Childless styles
   childless: {
-    '::before': {
+    "::before": {
       marginBottom: 0,
       marginRight: 0,
     },
 
-    '::after': {
+    "::after": {
       marginLeft: 0,
       marginTop: 0,
     },
@@ -66,38 +83,37 @@ color:'red',
 
   // Alignment variations
   start: {
-    '::after': {
+    "::after": {
       content: '""',
     },
   },
   center: {
-    '::before': {
+    "::before": {
       content: '""',
     },
-    '::after': {
+    "::after": {
       content: '""',
     },
   },
   end: {
-    '::before': {
+    "::before": {
       content: '""',
     },
   },
-
 });
 
 export const useHorizontalStyles = makeStyles({
   // Base styles
   base: {
-    width: '100%',
-    '::before': {
-      borderTopStyle: 'solid',
+    width: "100%",
+    "::before": {
+      borderTopStyle: "solid",
       borderTopWidth: borderWidth,
       minWidth: minStartEndLength,
     },
 
-    '::after': {
-      borderTopStyle: 'solid',
+    "::after": {
+      borderTopStyle: "solid",
       borderTopWidth: borderWidth,
       minWidth: minStartEndLength,
     },
@@ -111,29 +127,29 @@ export const useHorizontalStyles = makeStyles({
 
   // Alignment variations
   start: {
-    '::before': {
+    "::before": {
       content: '""',
       marginRight: contentSpacing,
       maxWidth: maxStartEndLength,
     },
 
-    '::after': {
+    "::after": {
       marginLeft: contentSpacing,
     },
   },
   center: {
-    '::before': {
+    "::before": {
       marginRight: contentSpacing,
     },
-    '::after': {
+    "::after": {
       marginLeft: contentSpacing,
     },
   },
   end: {
-    '::before': {
+    "::before": {
       marginRight: contentSpacing,
     },
-    '::after': {
+    "::after": {
       content: '""',
       marginLeft: contentSpacing,
       maxWidth: maxStartEndLength,
@@ -144,18 +160,18 @@ export const useHorizontalStyles = makeStyles({
 export const useVerticalStyles = makeStyles({
   // Base styles
   base: {
-    flexDirection: 'column',
-    minHeight: '20px',
+    flexDirection: "column",
+    minHeight: "20px",
 
-    '::before': {
-      borderRightStyle: 'solid',
-      borderRightWidth:borderWidth,
+    "::before": {
+      borderRightStyle: "solid",
+      borderRightWidth: borderWidth,
       minHeight: minStartEndLength,
     },
 
-    '::after': {
-      borderRightStyle: 'solid',
-      borderRightWidth:borderWidth,
+    "::after": {
+      borderRightStyle: "solid",
+      borderRightWidth: borderWidth,
       minHeight: minStartEndLength,
     },
   },
@@ -168,34 +184,34 @@ export const useVerticalStyles = makeStyles({
 
   // With children styles
   withChildren: {
-    minHeight: '84px',
+    minHeight: "84px",
   },
 
   // Alignment variations
   start: {
-    '::before': {
+    "::before": {
       content: '""',
       marginBottom: contentSpacing,
       maxHeight: maxStartEndLength,
     },
 
-    '::after': {
+    "::after": {
       marginTop: contentSpacing,
     },
   },
   center: {
-    '::before': {
+    "::before": {
       marginBottom: contentSpacing,
     },
-    '::after': {
+    "::after": {
       marginTop: contentSpacing,
     },
   },
   end: {
-    '::before': {
+    "::before": {
       marginBottom: contentSpacing,
     },
-    '::after': {
+    "::after": {
       content: '""',
       marginTop: contentSpacing,
       maxHeight: maxStartEndLength,

@@ -16,6 +16,7 @@
     "build-storybook-docs": "storybook build --docs"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^4.1.0",
     "@griffel/react": "^1.5.24",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
