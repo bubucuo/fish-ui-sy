@@ -1,0 +1,16 @@
+
+import { Canvas,Story, Meta } from '@storybook/blocks';
+import * as ThemeMotion from './index.stories';
+import { MotionCurves, MotionDuration } from './index.stories';
+
+<Meta of={ThemeMotion} />
+
+<h1 class="sbdocs-title">Motion</h1>
+
+### Curves
+<Canvas of={MotionCurves}  withSource="none" sourceState='none' />
+
+### Durations
+<Canvas of={MotionDuration}  withSource="none" sourceState='none' />
+
+
