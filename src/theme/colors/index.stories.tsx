@@ -167,5 +167,5 @@ const useDebounce = (fn: (...args: unknown[]) => void, duration: number) => {
 };
 
 export default {
-  title: "主题/Color",
+  title: "主题/Colors",
 };
