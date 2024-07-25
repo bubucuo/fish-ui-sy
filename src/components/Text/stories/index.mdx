@@ -1,0 +1,26 @@
+
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TextStories from './index.stories';
+import { Default,Font } from './index.stories';
+
+<Meta of={TextStories} />
+
+# Text
+Typography and styling abstraction component used to ensure consistency and standardize text throughout your application.
+
+## Best practices
+
+### Do
+
+- Use Text whenever you need to display stylized text
+- Use Text to display read-only text
+- Use the `as` prop to give the text a semantic meaning. By default, the Text component will result in a `span` element.
+
+## Default
+
+<Canvas of={Default} />
+
+## Font
+
+<Canvas of={Font} />
+

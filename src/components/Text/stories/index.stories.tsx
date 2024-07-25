@@ -2,8 +2,8 @@ import React from "react";
 import { Meta } from "@storybook/react";
 import { Text } from "@/index";
 
-export { Default } from "./stories/Default.stories";
-export { Font } from "./stories/TextFont.stories";
+export { Default } from "./Default.stories";
+export { Font } from "./TextFont.stories";
 
 export default {
   title: "组件/Text",
