@@ -1,5 +1,5 @@
 
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta,Source } from '@storybook/blocks';
 import * as TextStories from './index.stories';
 import { Default,Presets, Font, Size, Weight, Italic, Underline, StrikeThrough, Truncate, Alignment } from './index.stories';
 
@@ -18,7 +18,13 @@ Typography and styling abstraction component used to ensure consistency and stan
 
 ## Default
 canvas参数 https://storybook.js.org/docs/api/doc-blocks/doc-block-canvas
-<Canvas of={Default} />
+
+<Canvas of={Default} source={{
+    code: Default
+}}>
+
+
+</Canvas>
 
 ## Presets
 <Canvas of={Presets} />

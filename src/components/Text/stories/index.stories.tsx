@@ -14,12 +14,11 @@ export { Alignment } from "./TextAlignment.example";
 export default {
   title: "组件/Text",
   component: Text,
-  // subcomponents: {
-  //   Presets: Display,
-  // },
   parameters: {
     docs: {
-      description: "omg",
+      description: {
+        component: "文本，可以帮助你统一项目中的文本样式。",
+      },
     },
   },
 } as Meta;

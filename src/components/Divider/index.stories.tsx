@@ -6,11 +6,6 @@ import { Divider, tokens } from "@/index";
 export default {
   title: "布局/Divider 分割线",
   component: Divider,
-  parameters: {
-    docs: {
-      description: "内容分割线。",
-    },
-  },
 } as Meta;
 
 export const Default = {

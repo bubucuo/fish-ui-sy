@@ -20,7 +20,7 @@ import {
   webLightTheme,
   Title3,
 } from "@/index";
-// import textPresetsMd from "./TextPresets.md";
+import textPresetsMd from "./TextPresets.md";
 import { makeStyles } from "@griffel/react";
 
 const useStyles = makeStyles({
@@ -63,7 +63,8 @@ export const Presets = () => {
 Presets.parameters = {
   docs: {
     description: {
-      // story: textPresetsMd,
+      story:
+        "**Presets** are a set of components with predefined styles for typography, based in our [Theme Tokens](./?path=/docs/theme-typography--page). They are used to create and share a consistent look and feel.<br> All the base `Text` props can be used, except for `font`, `size` and `weight`.", // "123Another description on the story, overriding the comments",
     },
   },
 };

@@ -2,9 +2,6 @@ import { mergeClasses } from "@griffel/react";
 import { TextProps } from "./Text.types";
 import { useTextStyles } from "./useTextStyles.styles";
 
-/**
- * 内容分割线。
- */
 export const Text = ({
   align = "start",
   block = false,
