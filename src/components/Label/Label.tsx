@@ -10,6 +10,12 @@ export const Label = ({
   children,
   className,
 }: LabelProps) => {
+  console.log(
+    "%c [  ]-15",
+    "font-size:13px; background:pink; color:#bf2c9f;",
+    children,
+    disabled
+  );
   const styles = useStyles();
   return (
     <span
@@ -31,6 +37,7 @@ export const Label = ({
             disabled && styles.disabled
           )}
           aria-hidden={true}
+          children={typeof required === "string" ? required : "*"}
         />
       )}
     </span>

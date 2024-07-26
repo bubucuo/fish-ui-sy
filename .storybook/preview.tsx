@@ -1,7 +1,18 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
 import { withLinks } from "@storybook/addon-links";
+import { FishProvider } from "../src/components/FishProvider/FishProvider";
+import { webLightTheme } from "../src/tokens/themes/web/lightTheme";
 
-export const decorators = [withLinks];
+// export const decorators = [withLinks];
+
+export const decorators = [
+  (Story) => (
+    <FishProvider theme={webLightTheme}>
+      <Story />
+    </FishProvider>
+  ),
+];
 
 const preview: Preview = {
   tags: ["autodocs"],
