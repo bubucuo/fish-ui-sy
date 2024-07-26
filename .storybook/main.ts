@@ -5,8 +5,9 @@ const config: StorybookConfig = {
   stories: [
     "../src/**/*.mdx",
     "../src/**/**/*.mdx",
-    "../src/**/index.@(mdx|stories.@(js|jsx|mjs|ts|tsx))",
-    "../src/**/**/index.@(mdx|stories.@(js|jsx|mjs|ts|tsx))"
+    "../src/**/*.@(mdx|stories.@(js|jsx|mjs|ts|tsx))",
+    "../src/**/**/*.@(mdx|stories.@(js|jsx|mjs|ts|tsx))",
+    // "../src/**/**/**/*.@(mdx|stories.@(js|jsx|mjs|ts|tsx))",
   ],
   addons: [
     "@storybook/addon-links",

@@ -1,7 +1,7 @@
 
 import { Canvas, Meta } from '@storybook/blocks';
 import * as TextStories from './index.stories';
-import { Default,Font } from './index.stories';
+import { Default,Presets, Font, Size, Weight, Italic, Underline, StrikeThrough, Truncate, Alignment } from './index.stories';
 
 <Meta of={TextStories} />
 
@@ -17,10 +17,32 @@ Typography and styling abstraction component used to ensure consistency and stan
 - Use the `as` prop to give the text a semantic meaning. By default, the Text component will result in a `span` element.
 
 ## Default
-
+canvas参数 https://storybook.js.org/docs/api/doc-blocks/doc-block-canvas
 <Canvas of={Default} />
 
-## Font
+## Presets
+<Canvas of={Presets} />
 
+## Font
 <Canvas of={Font} />
 
+## Size
+<Canvas of={Size} />
+
+## Weight
+<Canvas of={Weight} />
+
+## Italic
+<Canvas of={Italic} />
+
+## Underline
+<Canvas of={Underline} />
+
+## StrikeThrough
+<Canvas of={StrikeThrough} />
+
+## Truncate
+<Canvas of={Truncate} />
+
+## Alignment
+<Canvas of={Alignment} />

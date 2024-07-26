@@ -8,7 +8,7 @@ import {
   Theme,
 } from "@/index";
 import { makeStyles } from "@griffel/react";
-import { ColorRampItem } from "./ColorRamp.stories";
+import { ColorRampItem } from "./ColorRamp.example";
 
 // FIXME: hardcoded theme
 const theme = {
@@ -168,4 +168,13 @@ const useDebounce = (fn: (...args: unknown[]) => void, duration: number) => {
 
 export default {
   title: "主题/Colors",
+  parameters: {
+    fullscreen: true,
+    doc: {
+      story: {
+        iframeHeight: 800,
+        iframeWidth: 1800,
+      },
+    },
+  },
 };

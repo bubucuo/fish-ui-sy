@@ -1,29 +1,6 @@
-import * as React from "react";
 import { mergeClasses } from "@griffel/react";
 import { TextProps } from "./Text.types";
 import { useTextStyles } from "./useTextStyles.styles";
-
-export type DividerProps = React.HTMLAttributes<HTMLDivElement> & {
-  /**
-   * 分隔线内内容的对齐方式。
-   * @default 'center'
-   */
-  alignContent?: "start" | "center" | "end";
-
-  /**
-   * 在divider的开头和结尾添加padding。
-   *
-   * @default false
-   */
-  inset?: boolean;
-
-  /**
-   * 分隔线可以是水平的（默认）或垂直的
-   *
-   * @default false
-   */
-  vertical?: boolean;
-};
 
 /**
  * 内容分割线。

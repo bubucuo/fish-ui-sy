@@ -1,5 +1,5 @@
-import { makeStyles } from "@griffel/react";
 import * as React from "react";
+import { makeStyles } from "@griffel/react";
 import { Text } from "@/index";
 
 const useStyles = makeStyles({

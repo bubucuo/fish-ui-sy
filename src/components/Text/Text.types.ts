@@ -73,3 +73,5 @@ export type TextProps = React.HTMLAttributes<HTMLSpanElement> & {
    */
   wrap?: boolean;
 };
+
+export type TextPresetProps = Omit<TextProps, "font" | "size" | "weight">;
