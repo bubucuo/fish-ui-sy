@@ -3,14 +3,21 @@ import type { Preview } from "@storybook/react";
 import { withLinks } from "@storybook/addon-links";
 import { FishProvider } from "../src/components/FishProvider/FishProvider";
 import { webLightTheme } from "../src/tokens/themes/web/lightTheme";
+import { FishDocsContainer } from "../docs/src/FishDocsContainer.doc";
+import { FishDocsPage } from "../docs/src/FishDocsPage.doc";
 
 // export const decorators = [withLinks];
 
 export const decorators = [
   (Story) => (
-    <FishProvider theme={webLightTheme}>
+    <div
+      style={{
+        backgroundColor: "rgb(250, 250, 250)",
+        padding: "48px 24px 48px 24px",
+      }}
+    >
       <Story />
-    </FishProvider>
+    </div>
   ),
 ];
 
@@ -36,6 +43,13 @@ const preview: Preview = {
     },
 
     hideEmpty: true,
+
+    // docs
+
+    docs: {
+      container: FishDocsContainer,
+      page: FishDocsPage,
+    },
   },
 };
 

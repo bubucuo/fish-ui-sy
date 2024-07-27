@@ -1,25 +1,15 @@
-import { tokens } from "@/index";
 import { shorthands, makeStyles } from "@griffel/react";
-// import {   DividerState } from './Divider.types';
-
-export const dividerClassNames = {
-  root: "fish-ui-Divider",
-  wrapper: "fish-ui-Divider__wrapper",
-};
+import { tokens } from "@/index";
 
 const contentSpacing = "12px";
 const insetSpacing = "12px";
 const maxStartEndLength = "8px";
 const minStartEndLength = "8px;";
 
-const borderColor = "red";
-const borderWidth = "1px";
-
-// console.log(
-//   "%c [  ]-19",
-//   "font-size:13px; background:pink; color:#bf2c9f;",
-//   tokens.colorNeutralForeground3BrandHover
-// );
+export const dividerClassNames = {
+  root: "fish-ui-Divider",
+  wrapper: "fish-ui-Divider__wrapper",
+};
 
 export const useBaseStyles = makeStyles({
   // Base styles
@@ -31,40 +21,22 @@ export const useBaseStyles = makeStyles({
     flexGrow: 1,
     position: "relative",
 
-    // fontFamily: tokens.fontFamilyBase,
-    // fontSize: tokens.fontSizeBase200,
-    // fontWeight: tokens.fontWeightRegular,
-    // lineHeight: tokens.lineHeightBase200,
-
+    fontFamily: tokens.fontFamilyBase,
+    fontSize: tokens.fontSizeBase200,
+    fontWeight: tokens.fontWeightRegular,
+    lineHeight: tokens.lineHeightBase200,
     textAlign: "center",
-    // color:'orange',
-
-    // color: tokens.colorNeutralForeground3BrandHover,
-
-    // Border styles
-    // border:'1px solid red',
-
-    // color: tokens.colorBrandForeground1,
 
     "::before": {
-      content: '""',
       boxSizing: "border-box",
       display: "flex",
       flexGrow: 1,
-      // ...shorthands.borderColor(tokens.colorBrandStroke1),
-
-      ...shorthands.borderColor(borderColor),
     },
 
     "::after": {
       boxSizing: "border-box",
-      content: '""',
-
       display: "flex",
       flexGrow: 1,
-      // ...shorthands.borderColor(tokens.colorBrandStroke1),
-
-      ...shorthands.borderColor(borderColor),
     },
   },
 
@@ -100,21 +72,68 @@ export const useBaseStyles = makeStyles({
       content: '""',
     },
   },
+
+  // Appearance variations
+  brand: {
+    color: tokens.colorBrandForeground1,
+
+    "::before": {
+      ...shorthands.borderColor(tokens.colorBrandStroke1),
+    },
+
+    "::after": {
+      ...shorthands.borderColor(tokens.colorBrandStroke1),
+    },
+  },
+  default: {
+    color: tokens.colorNeutralForeground2,
+
+    "::before": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke2),
+    },
+
+    "::after": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke2),
+    },
+  },
+  subtle: {
+    color: tokens.colorNeutralForeground3,
+
+    "::before": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke3),
+    },
+
+    "::after": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke3),
+    },
+  },
+  strong: {
+    color: tokens.colorNeutralForeground1,
+
+    "::before": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke1),
+    },
+
+    "::after": {
+      ...shorthands.borderColor(tokens.colorNeutralStroke1),
+    },
+  },
 });
 
 export const useHorizontalStyles = makeStyles({
   // Base styles
   base: {
     width: "100%",
+
     "::before": {
       borderTopStyle: "solid",
-      borderTopWidth: borderWidth,
+      borderTopWidth: tokens.strokeWidthThin,
       minWidth: minStartEndLength,
     },
 
     "::after": {
       borderTopStyle: "solid",
-      borderTopWidth: borderWidth,
+      borderTopWidth: tokens.strokeWidthThin,
       minWidth: minStartEndLength,
     },
   },
@@ -165,13 +184,13 @@ export const useVerticalStyles = makeStyles({
 
     "::before": {
       borderRightStyle: "solid",
-      borderRightWidth: borderWidth,
+      borderRightWidth: tokens.strokeWidthThin,
       minHeight: minStartEndLength,
     },
 
     "::after": {
       borderRightStyle: "solid",
-      borderRightWidth: borderWidth,
+      borderRightWidth: tokens.strokeWidthThin,
       minHeight: minStartEndLength,
     },
   },

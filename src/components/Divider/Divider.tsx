@@ -15,6 +15,14 @@ export type DividerProps = React.HTMLAttributes<HTMLDivElement> & {
   alignContent?: "start" | "center" | "end";
 
   /**
+   * A divider can have one of the preset appearances.
+   * When not specified, the divider has its default appearance.
+   *
+   * @default 'default'
+   */
+  appearance?: "brand" | "default" | "strong" | "subtle";
+
+  /**
    * 在divider的开头和结尾添加padding。
    *
    * @default false
@@ -34,6 +42,7 @@ export type DividerProps = React.HTMLAttributes<HTMLDivElement> & {
  */
 export const Divider = ({
   alignContent = "center",
+  appearance = "default",
   inset = false,
   vertical = false,
   children,
@@ -54,6 +63,7 @@ export const Divider = ({
     // Base styles
     baseStyles.base,
     baseStyles[alignContent],
+    appearance && baseStyles[appearance],
 
     // Horizontal styles
     !vertical && horizontalStyles.base,

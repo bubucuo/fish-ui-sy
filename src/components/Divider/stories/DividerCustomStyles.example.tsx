@@ -1,47 +1,5 @@
-import React from "react";
-import { Meta } from "@storybook/react";
 import { makeStyles, shorthands } from "@griffel/react";
 import { Divider, tokens } from "@/index";
-
-export default {
-  title: "布局/Divider 分割线",
-  component: Divider,
-} as Meta;
-
-export const Default = {
-  args: {
-    children: "Text",
-  },
-};
-
-export const Vertical = {
-  args: {
-    vertical: true,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "垂直分隔线。",
-      },
-    },
-  },
-};
-
-export const WithContent = () => {
-  <Divider alignContent="center">
-    <div>omg</div>
-    <img src="https://react.fluentui.dev/static/media/fluentui-logo.2c059e02.svg" />
-    <div>omg</div>
-  </Divider>;
-};
-
-WithContent.parameters = {
-  docs: {
-    description: {
-      story: "带内容的分隔线，居中位置可自行调节，默认居中。",
-    },
-  },
-};
 
 const useStyles = makeStyles({
   root: {
@@ -64,7 +22,7 @@ const useStyles = makeStyles({
     minHeight: "192px",
   },
   customWidth: {
-    width: "500px",
+    width: "200px",
   },
   customHeight: {
     maxHeight: "50px",
@@ -72,14 +30,13 @@ const useStyles = makeStyles({
   customFont: {
     fontSize: "14px",
     fontWeight: "bold",
-    color: "pink",
   },
   customLineColor: {
     "::before": {
-      ...shorthands.borderColor("red"),
+      ...shorthands.borderColor(tokens.colorPaletteRedBorder2),
     },
     "::after": {
-      ...shorthands.borderColor("red"),
+      ...shorthands.borderColor(tokens.colorPaletteRedBorder2),
     },
   },
   customLineStyle: {
@@ -100,7 +57,7 @@ export const CustomStyles = () => {
   return (
     <div className={styles.root}>
       <div className={styles.example}>
-        <Divider className={styles.customWidth}>Custom width (500px)</Divider>
+        <Divider className={styles.customWidth}>Custom width (200px)</Divider>
       </div>
       <div className={styles.customHeightExample}>
         <Divider vertical className={styles.customHeight}>
@@ -127,7 +84,8 @@ export const CustomStyles = () => {
 CustomStyles.parameters = {
   docs: {
     description: {
-      story: "分隔线可以自定义样式。",
+      story:
+        "A divider can have custom styles applied to both the label and the line.",
     },
   },
 };
