@@ -4,7 +4,7 @@ import { makeStyles } from "@griffel/react";
 import {
   FishProvider,
   tokens,
-  Button,
+  ExampleButton,
   webLightTheme,
   teamsLightTheme,
   teamsDarkTheme,
@@ -41,19 +41,25 @@ export const Default = () => {
       <div>
         <FishProvider className={styles.provider} theme={webLightTheme}>
           <div className={styles.text}>Web Light Theme</div>
-          <Button className={styles.button}>Web Light Theme</Button>
+          <ExampleButton className={styles.button}>
+            Web Light Theme
+          </ExampleButton>
         </FishProvider>
       </div>
       <div>
         <FishProvider className={styles.provider} theme={teamsLightTheme}>
           <div className={styles.text}>Teams Light Theme</div>
-          <Button className={styles.button}>Teams Light Theme</Button>
+          <ExampleButton className={styles.button}>
+            Teams Light Theme
+          </ExampleButton>
         </FishProvider>
       </div>
       <div>
         <FishProvider className={styles.provider} theme={teamsDarkTheme}>
           <div className={styles.text}>Teams Dark Theme</div>
-          <Button className={styles.button}>Teams Dark Theme</Button>
+          <ExampleButton className={styles.button}>
+            Teams Dark Theme
+          </ExampleButton>
         </FishProvider>
       </div>
     </>
