@@ -6,11 +6,13 @@ import {
   Description,
   Primary,
   Stories,
+  HeaderMdx,
+  ArgTypes,
 } from "@storybook/addon-docs";
 import type { SBEnumType } from "@storybook/csf";
 import { tokens } from "@/index";
 import { makeStyles, shorthands } from "@griffel/react";
-import { Toc } from "./Toc.doc";
+import { Toc, nameToHash } from "./Toc.doc";
 
 const useStyles = makeStyles({
   divider: {
@@ -96,11 +98,11 @@ export const FishDocsPage = () => {
             <Description />
           </div>
           <hr className={styles.divider} />
-          {/* <HeaderMdx as="h3" id={nameToHash(primaryStory.name)}>
+          <HeaderMdx as="h3" id={nameToHash(primaryStory.name)}>
             {primaryStory.name}
-          </HeaderMdx> */}
+          </HeaderMdx>
           <Primary />
-          {/* <ArgsTable story={PRIMARY_STORY} /> */}
+          <ArgTypes />
           {primaryStory.argTypes.as &&
             primaryStory.argTypes.as?.type?.name === "enum" && (
               <div className={styles.nativeProps}>
@@ -120,7 +122,7 @@ export const FishDocsPage = () => {
                 </div>
               </div>
             )}
-          <Stories />
+          <Stories includePrimary={false} />
         </div>
         <div className={styles.toc}>
           <Toc stories={stories} />
