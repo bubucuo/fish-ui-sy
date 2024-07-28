@@ -1,25 +1,14 @@
-import React from "react";
 import type { Preview } from "@storybook/react";
-import { withLinks } from "@storybook/addon-links";
-import { FishProvider } from "../src/components/FishProvider/FishProvider";
-import { webLightTheme } from "../src/tokens/themes/web/lightTheme";
-import { FishDocsContainer } from "../docs/src/FishDocsContainer.doc";
+import { FishDocsContainer } from "../docs/src/FishDocsContainer.stories";
 import { FishDocsPage } from "../docs/src/FishDocsPage.doc";
+
+import { withFishProvider } from "../addons/react-storybook-addon/src/decorators/withFishProvider";
+import { withReactStrictMode } from "../addons/react-storybook-addon/src/decorators/withReactStrictMode";
+import { THEME_ID } from "../addons/react-storybook-addon/src";
 
 // export const decorators = [withLinks];
 
-export const decorators = [
-  (Story) => (
-    <div
-      style={{
-        backgroundColor: "rgb(250, 250, 250)",
-        padding: "48px 24px 48px 24px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
+export const decorators = [withFishProvider, withReactStrictMode];
 
 const preview: Preview = {
   tags: ["autodocs"],
@@ -45,12 +34,17 @@ const preview: Preview = {
     hideEmpty: true,
 
     // docs
-
     docs: {
+      // theme: themes[0].id,
       container: FishDocsContainer,
       page: FishDocsPage,
+      components: {
+        // code: "omg",
+      },
     },
   },
 };
+
+export const globals = { [THEME_ID]: undefined }; // allow theme to be set by URL query param
 
 export default preview;

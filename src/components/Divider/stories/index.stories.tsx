@@ -1,6 +1,5 @@
 import { Meta } from "@storybook/react";
 import { Divider } from "@/index";
-
 export { Default } from "./DividerDefault.example";
 export { Vertical } from "./DividerVertical.example";
 export { Appearance } from "./DividerAppearance.example";

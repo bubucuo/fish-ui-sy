@@ -1,0 +1,56 @@
+{
+  "name": "@fish-ui-sy/react-storybook-addon",
+  "version": "1.0.0",
+  "description": "react storybook addon",
+  "main": "lib-commonjs/index.js",
+  "module": "lib/index.js",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bubucuo/fish-ui-sy"
+  },
+  "scripts": {
+    "build": "tsc -b && vite build && tsc --declaration",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "beachball": {
+    "disallowedChangeTypes": [
+      "major",
+      "prerelease"
+    ]
+  },
+  "peerDependencies": {
+    "@storybook/addons": "^6.5.15",
+    "@storybook/api": "^6.5.15",
+    "@storybook/components": "^6.5.15",
+    "@storybook/core-events": "^6.5.15",
+    "@storybook/theming": "^6.5.15",
+    "@types/react": ">=16.14.0 <19.0.0",
+    "@types/react-dom": ">=16.9.0 <19.0.0",
+    "react": ">=16.14.0 <19.0.0",
+    "react-dom": ">=16.14.0 <19.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "node": "./lib-commonjs/index.js",
+      "import": "./lib/index.js",
+      "require": "./lib-commonjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.md",
+    "dist/*.d.ts",
+    "lib",
+    "lib-commonjs",
+    "preset.js"
+  ],
+  "dependencies": {
+    "@storybook/manager-api": "^8.2.6"
+  }
+}

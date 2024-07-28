@@ -1,11 +1,14 @@
-import type { Theme } from "@/index";
+import { teamsLightTheme } from "../../../src/tokens/themes/teams/lightTheme";
+import { teamsDarkTheme } from "../../../src/tokens/themes/teams/darkTheme";
+import { teamsHighContrastTheme } from "../../../src/tokens/themes/teams/highContrastTheme";
+import { Theme } from "../../../dist/tokens/types";
 import {
   webLightTheme,
   webDarkTheme,
-  teamsLightTheme,
-  teamsDarkTheme,
-  teamsHighContrastTheme,
-} from "@/index";
+  // teamsLightTheme,
+  // teamsDarkTheme,
+  // teamsHighContrastTheme,
+} from "../../../src/tokens/themes/web/index";
 
 export const themes = [
   { id: "web-light", label: "Web Light", theme: webLightTheme },

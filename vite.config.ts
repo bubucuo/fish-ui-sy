@@ -31,6 +31,11 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "_/src": path.resolve(__dirname, "./src"),
+      "_/react-storybook-addon": path.resolve(
+        __dirname,
+        "./addons/react-storybook-addon/src"
+      ),
     },
   },
   build: {

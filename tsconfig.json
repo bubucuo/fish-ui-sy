@@ -19,8 +19,9 @@
     "declaration": true,
     "declarationDir": "dist",
     "paths": {
-      "@/*": ["./src/*", "./src/components/*"]
-    },
+      "@/*": ["./src/*", "./src/components/*"],
+      "_/docs": ["./docs/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "src/components/**/*.stories.*"]

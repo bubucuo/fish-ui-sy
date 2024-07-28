@@ -1,5 +1,8 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import path from "path";
 import remarkGfm from "remark-gfm";
+
+const tsConfigPath = path.resolve(__dirname, "../tsconfig.base.json");
 
 const config: StorybookConfig = {
   stories: [
@@ -13,6 +16,8 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/preview-api",
+    "@storybook/manager-api",
     {
       name: "@storybook/addon-docs",
       options: {
@@ -23,6 +28,8 @@ const config: StorybookConfig = {
         },
       },
     },
+    // docs/addon
+    // loadWorkspaceAddon("@fishui/react-storybook-addon", { tsConfigPath }),
   ],
   framework: {
     name: "@storybook/react-vite",

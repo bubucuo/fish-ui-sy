@@ -11,8 +11,6 @@ import type { SBEnumType } from "@storybook/csf";
 import { tokens } from "@/index";
 import { makeStyles, shorthands } from "@griffel/react";
 import { Toc } from "./Toc.doc";
-import { themes } from "./theme";
-import { ThemePicker } from "./ThemePicker.doc";
 
 const useStyles = makeStyles({
   divider: {
@@ -82,13 +80,9 @@ const getNativeElementsList = (elements: SBEnumType["value"]): JSX.Element => {
 
 export const FishDocsPage = () => {
   const context = React.useContext(DocsContext);
-  // const selectedTheme = themes.find(
-  //   (theme) => theme.id === context.globals![THEME_ID]
-  // );
 
   const stories = context.componentStories();
   const primaryStory = stories[0];
-  // const videos = context.parameters?.videos ?? null;
   const styles = useStyles();
 
   return (
@@ -96,13 +90,10 @@ export const FishDocsPage = () => {
       <Title />
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <div className={styles.globalTogglesContainer}>
-            <ThemePicker />
-          </div>
+          <div className={styles.globalTogglesContainer}></div>
           <Subtitle />
           <div className={styles.description}>
             <Description />
-            {/* {videos && <VideoPreviews videos={videos} />} */}
           </div>
           <hr className={styles.divider} />
           {/* <HeaderMdx as="h3" id={nameToHash(primaryStory.name)}>

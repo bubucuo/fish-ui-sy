@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "target": "ES2019",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["ES2019", "dom"],
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "pretty": true,
+    "typeRoots": ["node_modules/@types", "./typings"],
+    "baseUrl": ".",
+    "paths": {
+      "@fishui/react-storybook-addon": [
+        "docs/addons/react-storybook-addon/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules"]
+}
