@@ -10,7 +10,7 @@ import {
   ArgTypes,
 } from "@storybook/addon-docs";
 import type { SBEnumType } from "@storybook/csf";
-import { tokens } from "@/index";
+import { tokens } from "fish-ui-sy";
 import { makeStyles, shorthands } from "@griffel/react";
 import { Toc, nameToHash } from "./Toc.doc";
 

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { teamsLightTheme } from "@/index";
-import type { StrokeWidthTokens } from "@/index";
+import { teamsLightTheme } from "fish-ui-sy";
+import type { StrokeWidthTokens } from "fish-ui-sy";
 
 const theme = teamsLightTheme;
 

@@ -8,7 +8,7 @@ import {
   webLightTheme,
   teamsLightTheme,
   teamsDarkTheme,
-} from "@/index";
+} from "fish-ui-sy";
 
 export default {
   title: "主题/FishProvider 主题设置",

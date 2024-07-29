@@ -1,6 +1,6 @@
 import * as React from "react";
 import { makeStyles } from "@griffel/react";
-import { Button } from "@/index";
+import { Button } from "fish-ui-sy";
 // import { CalendarMonthRegular } from '@fluentui/react-icons';
 
 const CalendarMonthRegular = () => <div>CalendarMonthRegular icon</div>;

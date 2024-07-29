@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { InputProps } from "./Input.types";
-import type { ForwardRefComponent } from "@/index";
+import type { ForwardRefComponent } from "fish-ui-sy";
 import {
   inputClassNames,
   useContentClassName,

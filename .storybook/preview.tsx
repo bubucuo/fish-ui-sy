@@ -13,7 +13,7 @@ import "../addons/react-storybook-addon-export-to-sandbox/src/styles.css";
 // export const decorators = [withLinks];
 
 export const decorators = [
-  // withExportToSandboxButton,
+  withExportToSandboxButton,
   withFishProvider,
   withReactStrictMode,
 ];
@@ -39,18 +39,13 @@ const preview: Preview = {
       // theme: themes[0].id,
       container: FishDocsContainer,
       page: FishDocsPage,
-      transformSource: (
-        source: string,
-        storyContext: StoryContextForEnhancers
-      ) => {
-        console.log(
-          "%c [  ]-48",
-          "font-size:13px; background:pink; color:#bf2c9f;",
-          storyContext
-        );
-        // This config renders story source generated via `fullSource` parameter that is being added by @fluentui/babel-preset-storybook-full-source plugin, which is registered as part of this preset
-        return storyContext.parameters.fullSource;
-      },
+      // transformSource: (
+      //   source: string,
+      //   storyContext: StoryContextForEnhancers
+      // ) => {
+      //   // This config renders story source generated via `fullSource` parameter that is being added by @fluentui/babel-preset-storybook-full-source plugin, which is registered as part of this preset
+      //   return storyContext.parameters.fullSource;
+      // },
     },
 
     exportToSandbox: {

@@ -1,5 +1,5 @@
 import { makeStyles, shorthands } from "@griffel/react";
-import { Divider, tokens } from "@/index";
+import { Divider, tokens } from "fish-ui-sy";
 
 const useStyles = makeStyles({
   root: {

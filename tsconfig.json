@@ -19,6 +19,7 @@
     "declaration": true,
     "declarationDir": "dist",
     "paths": {
+      "fish-ui-sy": ["./src/index.ts"],
       "@/*": ["./src/*", "./src/components/*"],
       "_/docs": ["./docs/*"]
     }

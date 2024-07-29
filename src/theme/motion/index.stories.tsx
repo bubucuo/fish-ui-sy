@@ -1,7 +1,7 @@
 import * as React from "react";
 import { makeStyles } from "@griffel/react";
-import { teamsLightTheme } from "@/index";
-import type { CurveTokens, DurationTokens } from "@/index";
+import { teamsLightTheme } from "fish-ui-sy";
+import type { CurveTokens, DurationTokens } from "fish-ui-sy";
 
 const theme = teamsLightTheme;
 

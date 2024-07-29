@@ -1,6 +1,6 @@
 import * as React from "react";
 import { makeStyles } from "@griffel/react";
-import { Text } from "@/index";
+import { Text } from "fish-ui-sy";
 
 const useStyles = makeStyles({
   text: {

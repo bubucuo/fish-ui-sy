@@ -1,4 +1,4 @@
-import { PartialTheme } from "@/index";
+import { PartialTheme } from "fish-ui-sy";
 
 /**
  * Creates a CSS rule from a theme object.

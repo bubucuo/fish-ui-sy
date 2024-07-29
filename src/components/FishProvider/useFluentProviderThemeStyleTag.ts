@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createCSSRuleFromTheme } from "./createCSSRuleFromTheme";
-import { Theme, useId, useIsomorphicLayoutEffect } from "@/index";
+import { Theme, useId, useIsomorphicLayoutEffect } from "fish-ui-sy";
 
 // String concatenation is used to prevent bundlers to complain with older versions of React
 const useInsertionEffect = (React as never)["useInsertion" + "Effect"]

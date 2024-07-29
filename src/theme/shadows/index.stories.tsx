@@ -3,8 +3,8 @@ import {
   teamsDarkTheme,
   teamsHighContrastTheme,
   teamsLightTheme,
-} from "@/index";
-import type { ShadowTokens } from "@/index";
+} from "fish-ui-sy";
+import type { ShadowTokens } from "fish-ui-sy";
 
 // FIXME: hardcoded theme
 const theme = {

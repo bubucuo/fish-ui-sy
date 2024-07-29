@@ -1,8 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 import path from "path";
-import remarkGfm from "remark-gfm";
-
-const tsConfigPath = path.resolve(__dirname, "../tsconfig.base.json");
 
 const config: StorybookConfig = {
   stories: [

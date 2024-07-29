@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DocsContainer } from "@storybook/addon-docs";
-import { webLightTheme, webDarkTheme, FishProvider } from "@/index";
+import { webLightTheme, webDarkTheme, FishProvider } from "fish-ui-sy";
 import { useGlobals } from "@storybook/manager-api";
 import { Consumer, Provider } from "@storybook/api";
 

@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { mergeClasses } from "@griffel/react";
-import type { ForwardRefComponent, TextPresetProps } from "@/index";
-import { Text } from "@/index";
+import type { ForwardRefComponent, TextPresetProps } from "fish-ui-sy";
+import { Text } from "fish-ui-sy";
 
 type Options = {
   displayName: string;

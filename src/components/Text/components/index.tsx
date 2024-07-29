@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
-import type { TextPresetProps } from "@/index";
-import { typographyStyles } from "@/index";
+import type { TextPresetProps } from "fish-ui-sy";
+import { typographyStyles } from "fish-ui-sy";
 import { makeStyles } from "@griffel/react";
 import { createPreset } from "./createPreset";
 

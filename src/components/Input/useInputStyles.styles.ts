@@ -1,4 +1,4 @@
-import { tokens, typographyStyles } from "@/index";
+import { tokens, typographyStyles } from "fish-ui-sy";
 import {
   makeResetStyles,
   makeStyles,

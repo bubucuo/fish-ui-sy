@@ -1,5 +1,8 @@
-import { teamsLightTheme } from "@/index";
-import type { HorizontalSpacingTokens, VerticalSpacingTokens } from "@/index";
+import { teamsLightTheme } from "fish-ui-sy";
+import type {
+  HorizontalSpacingTokens,
+  VerticalSpacingTokens,
+} from "fish-ui-sy";
 
 const theme = teamsLightTheme;
 

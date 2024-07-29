@@ -6,7 +6,7 @@
 // @ts-nocheck
 
 import * as React from "react";
-import { useIsomorphicLayoutEffect } from "@/index";
+import { useIsomorphicLayoutEffect } from "fish-ui-sy";
 import { TinyColor } from "@ctrl/tinycolor";
 
 export type ColorRampProps = {

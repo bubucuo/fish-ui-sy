@@ -3,7 +3,7 @@
 //   iconRegularClassName,
 // } from "@fluentui/react-icons";
 // import { createCustomFocusIndicatorStyle } from "@fluentui/react-tabster";
-import { tokens } from "@/index";
+import { tokens } from "fish-ui-sy";
 import { shorthands, makeStyles, makeResetStyles } from "@griffel/react";
 
 const iconFilledClassName = "";

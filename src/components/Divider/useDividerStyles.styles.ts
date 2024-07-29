@@ -1,5 +1,5 @@
 import { shorthands, makeStyles } from "@griffel/react";
-import { tokens } from "@/index";
+import { tokens } from "fish-ui-sy";
 
 const contentSpacing = "12px";
 const insetSpacing = "12px";

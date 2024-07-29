@@ -1,6 +1,5 @@
-import * as React from "react";
 import { makeStyles } from "@griffel/react";
-import { Divider, tokens } from "@/index";
+import { Divider, tokens } from "fish-ui-sy";
 
 const useStyles = makeStyles({
   root: {
@@ -32,12 +31,4 @@ export const Vertical = () => {
       </div>
     </div>
   );
-};
-
-Vertical.parameters = {
-  docs: {
-    description: {
-      story: "A divider can vertically separate two pieces of content.",
-    },
-  },
 };

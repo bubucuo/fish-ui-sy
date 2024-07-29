@@ -1,5 +1,5 @@
-// import { Menu, MenuButton, MenuItem, MenuList, MenuPopover, MenuTrigger } from '@/index';
-import { MenuButton } from "@/index";
+// import { Menu, MenuButton, MenuItem, MenuList, MenuPopover, MenuTrigger } from 'fish-ui-sy';
+import { MenuButton } from "fish-ui-sy";
 
 export const Default = () => (
   // <Menu>

@@ -1,4 +1,4 @@
-import { Label } from "@/index";
+import { Label } from "fish-ui-sy";
 
 export const Disabled = () => (
   <Label disabled required>

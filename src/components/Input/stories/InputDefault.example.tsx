@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { ArgTypes } from "@storybook/react";
-import type { InputProps } from "@/index";
-import { Input } from "@/index";
+import type { InputProps } from "fish-ui-sy";
+import { Input } from "fish-ui-sy";
 
 import { makeStyles } from "@griffel/react";
 

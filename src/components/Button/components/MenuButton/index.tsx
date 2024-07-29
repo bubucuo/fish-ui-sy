@@ -1,4 +1,4 @@
-import { Button } from "@/index";
+import { Button } from "fish-ui-sy";
 
 export const MenuButton = (props) => {
   return <Button {...props} />;

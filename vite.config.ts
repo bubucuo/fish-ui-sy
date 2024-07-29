@@ -31,6 +31,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "fish-ui-sy": path.resolve(__dirname, "./src/index.ts"),
       "_/src": path.resolve(__dirname, "./src"),
       "_/react-storybook-addon": path.resolve(
         __dirname,

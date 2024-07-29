@@ -1,5 +1,5 @@
 import { makeStyles } from "@griffel/react";
-import { tokens } from "@/index";
+import { tokens } from "fish-ui-sy";
 
 /**
  * Styles for the root slot

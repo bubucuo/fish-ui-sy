@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, mergeClasses, useRenderer_unstable } from "@griffel/react";
-import { Theme, canUseDOM, tokens } from "@/index";
+import { Theme, canUseDOM, tokens } from "fish-ui-sy";
 import { useFluentProviderThemeStyleTag } from "./useFluentProviderThemeStyleTag";
 
 export type ThemeContextValue = Theme | Partial<Theme> | undefined;

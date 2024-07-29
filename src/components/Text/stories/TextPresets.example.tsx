@@ -17,7 +17,7 @@ import {
   Title1,
   Title2,
   Title3,
-} from "@/index";
+} from "fish-ui-sy";
 import textPresetsMd from "./TextPresets.md";
 import { makeStyles } from "@griffel/react";
 
