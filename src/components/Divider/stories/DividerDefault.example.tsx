@@ -1,3 +1,4 @@
+import React from "react";
 import { makeStyles } from "@griffel/react";
 import { Divider, tokens } from "@/index";
 
@@ -30,3 +31,13 @@ export const Default = () => {
     </div>
   );
 };
+
+Default.parameters = {
+  docs: {
+    description: {
+      story: "DDD",
+    },
+  },
+};
+
+export default {};

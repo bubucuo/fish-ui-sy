@@ -15,11 +15,6 @@ import { Consumer, Provider } from "@storybook/api";
 export const FishDocsContainer = (args) => {
   const { children, context } = args;
 
-  console.log(
-    "%c [  ]-15",
-    "font-size:13px; background:pink; color:#bf2c9f;",
-    args
-  );
   return (
     <>
       <FishProvider

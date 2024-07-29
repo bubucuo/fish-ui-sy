@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/react";
 import { Text } from "@/index";
-export { Default } from "./Default.example";
+import { Default } from "./Default.example";
 export { Presets } from "./TextPresets.example";
 export { Font } from "./TextFont.example";
 export { Size } from "./TextSize.example";
@@ -22,3 +22,5 @@ export default {
     },
   },
 } as Meta;
+
+export { Default };

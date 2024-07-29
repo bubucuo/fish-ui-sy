@@ -5,18 +5,27 @@ export { Vertical } from "./DividerVertical.example";
 export { Appearance } from "./DividerAppearance.example";
 export { Inset } from "./DividerInset.example";
 export { AlignContent } from "./DividerAlignContent.example";
-export { CustomStyles } from "./DividerCustomStyles.example";
+// export { CustomStyles } from "./DividerCustomStyles.example";
+
+import { CustomStyles } from "./DividerCustomStyles.example";
 
 export default {
   title: "组件/Divider",
   component: Divider,
 } as Meta;
 
-// export const Default = {
-//   args: {
-//     children: "Text",
-//   },
-// };
+export const Default2 = {
+  args: {
+    children: "Text",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "默认分隔线。",
+      },
+    },
+  },
+};
 
 // export const Vertical = {
 //   args: {

@@ -18,18 +18,6 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/preview-api",
     "@storybook/manager-api",
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      },
-    },
-    // docs/addon
-    // loadWorkspaceAddon("@fishui/react-storybook-addon", { tsConfigPath }),
   ],
   framework: {
     name: "@storybook/react-vite",
