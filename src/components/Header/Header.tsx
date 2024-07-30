@@ -1,4 +1,4 @@
-import { Button } from "../..";
+import { Button } from "fish-ui-sy";
 import "./header.css";
 
 type User = {
