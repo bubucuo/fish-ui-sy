@@ -50,3 +50,5 @@ export const Small: Story = {
     label: "Button",
   },
 };
+
+export { Custom } from "./Custom.stories";
