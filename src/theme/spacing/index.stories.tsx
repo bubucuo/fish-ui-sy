@@ -73,4 +73,12 @@ export const Spacing = () => (
 
 export default {
   title: "主题/spacing",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };

@@ -1,87 +1,47 @@
-import { mergeClasses } from "@griffel/react";
-import { ButtonProps } from "./Button.types";
-import {
-  buttonClassNames,
-  useIconBaseClassName,
-  useIconStyles,
-  useRootBaseClassName,
-  useRootDisabledStyles,
-  useRootFocusStyles,
-  useRootIconOnlyStyles,
-  useRootStyles,
-} from "./useButtonStyles.styles";
+import './button.css';
 
-export const Button = (props: ButtonProps) => {
-  const {
-    appearance = "secondary",
-    disabled = false,
-    disabledFocusable = false,
-    icon,
-    iconPosition = "before",
-    shape = "rounded",
-    size = "medium",
-    children,
-    className,
-  } = props;
+export interface ButtonProps {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  primary?: boolean;
+  /**
+   * What background color to use
+   */
+  backgroundColor?: string;
+  /**
+   * How large should the button be?
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * Button contents
+   */
+  label: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
+}
 
-  const rootBaseClassName = useRootBaseClassName();
-  const iconBaseClassName = useIconBaseClassName();
-
-  const rootStyles = useRootStyles();
-  const rootDisabledStyles = useRootDisabledStyles();
-  const rootFocusStyles = useRootFocusStyles();
-  const rootIconOnlyStyles = useRootIconOnlyStyles();
-  const iconStyles = useIconStyles();
-
-  const iconOnly = Boolean(icon?.children && !props.children); // Slots definition
-
-  // if (icon) {
-  //   icon.className = mergeClasses(
-  //     buttonClassNames.icon,
-  //     iconBaseClassName,
-  //     !!children && iconStyles[iconPosition],
-  //     iconStyles[size],
-  //     icon.className
-  //   );
-  // }
-
+/**
+ * Primary UI component for user interaction
+ */
+export const Button = ({
+  primary = false,
+  size = 'medium',
+  backgroundColor,
+  label,
+  ...props
+}: ButtonProps) => {
+  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
-      className={mergeClasses(
-        buttonClassNames.root,
-        rootBaseClassName,
-
-        appearance && rootStyles[appearance],
-
-        rootStyles[size],
-        icon && size === "small" && rootStyles.smallWithIcon,
-        icon && size === "large" && rootStyles.largeWithIcon,
-        rootStyles[shape],
-
-        // Disabled styles
-        (disabled || disabledFocusable) && rootDisabledStyles.base,
-        (disabled || disabledFocusable) && rootDisabledStyles.highContrast,
-        appearance &&
-          (disabled || disabledFocusable) &&
-          rootDisabledStyles[appearance],
-
-        // Focus styles
-        appearance === "primary" && rootFocusStyles.primary,
-        rootFocusStyles[size],
-        rootFocusStyles[shape],
-
-        // Icon-only styles
-        iconOnly && rootIconOnlyStyles[size],
-
-        // User provided class name
-        className
-      )}
+      type="button"
+      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      style={{ backgroundColor }}
+      {...props}
     >
-      {iconPosition !== "after" && icon}
-      {children}
-      {iconPosition === "after" && icon}
+      {label}
     </button>
   );
 };
-
-Button.displayName = "Button";

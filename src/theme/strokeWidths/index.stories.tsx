@@ -1,4 +1,3 @@
-import * as React from "react";
 import { teamsLightTheme } from "fish-ui-sy";
 import type { StrokeWidthTokens } from "fish-ui-sy";
 
@@ -31,4 +30,12 @@ export const StrokeWidths = () => {
 
 export default {
   title: "主题/StrokeWidths",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };

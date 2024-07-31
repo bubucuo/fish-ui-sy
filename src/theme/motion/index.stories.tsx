@@ -123,4 +123,12 @@ export const MotionCurves = () => {
 
 export default {
   title: "主题/motion",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };

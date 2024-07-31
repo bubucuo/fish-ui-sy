@@ -47,4 +47,12 @@ export const BorderRadii = () => {
 
 export default {
   title: "主题/BorderRadius",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };

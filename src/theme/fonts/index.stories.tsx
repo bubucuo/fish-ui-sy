@@ -114,4 +114,12 @@ export const FontWeight = () => {
 
 export default {
   title: "主题/fonts",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };

@@ -1,4 +1,4 @@
-import { ExampleButton } from "fish-ui-sy";
+import { Button } from "fish-ui-sy";
 import "./header.css";
 
 type User = {
@@ -50,12 +50,12 @@ export const Header = ({
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <ExampleButton size="small" onClick={onLogout} label="Log out" />
+            <Button size="small" onClick={onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <ExampleButton size="small" onClick={onLogin} label="Log in" />
-            <ExampleButton
+            <Button size="small" onClick={onLogin} label="Log in" />
+            <Button
               primary
               size="small"
               onClick={onCreateAccount}

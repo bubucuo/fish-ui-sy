@@ -1,13 +1,17 @@
-import { PartialTheme } from "fish-ui-sy";
+import { Theme, PartialTheme } from "fish-ui-sy";
 
 /**
- * Creates a CSS rule from a theme object.
- *
- * Useful for scenarios when you want to apply theming statically to a top level elements like `body`.
+ * 根据theme，创建一个css规则，
+ * .fish-ui-FishProviderr0 {
+ *    --borderRadiusNone: 0;
+ *    --borderRadiusSmall: 2px;
+ *    略...
+ * }
  */
+
 export function createCSSRuleFromTheme(
   selector: string,
-  theme: PartialTheme | undefined
+  theme: Theme | PartialTheme | undefined
 ): string {
   if (theme) {
     const cssVarsAsString = (

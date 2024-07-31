@@ -8,7 +8,7 @@ import {
   Theme,
 } from "fish-ui-sy";
 import { makeStyles } from "@griffel/react";
-import { ColorRampItem } from "./ColorRamp.example";
+import { ColorRampItem } from "./ColorRamp.stories";
 
 // FIXME: hardcoded theme
 const theme = {
@@ -29,8 +29,6 @@ const useStyles = makeStyles({
   },
 });
 
-type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
-
 const tokens: Array<keyof Theme> = (
   Object.keys(theme.webLight) as Array<keyof Theme>
 ).filter(
@@ -47,15 +45,11 @@ export const Colors = () => {
   // Text typed in the input bar
   const [inputValue, setInputValue] = React.useState("");
 
-  // Value checked from the filter menu button
-  const [checkedValue, setCheckedValue] =
-    React.useState<Record<string, string[]>>();
-
   const styles = useStyles();
 
   // It returns tokens matching the input value.
   const searchToken = React.useCallback(
-    (newSearchValue) => {
+    (newSearchValue: string) => {
       const tokensFoundBySearch = tokens.filter(
         (token) =>
           token.toLowerCase().includes(newSearchValue) ||
@@ -72,11 +66,11 @@ export const Colors = () => {
 
   const updateSearchDebounced = useDebounce(searchToken, 220);
 
-  const onInputChange: InputProps["onChange"] = React.useCallback(
-    (_, { value }) => {
+  const onInputChange = React.useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
       updateSearchDebounced(value.trim().toLocaleLowerCase());
       setInputValue(value.trim().toLocaleLowerCase());
-      setCheckedValue(undefined);
     },
     [updateSearchDebounced]
   );
@@ -86,7 +80,6 @@ export const Colors = () => {
       <div className={styles.searchContainer}>
         <input
           placeholder={"Search for tokens by name or color"}
-          size={"large"}
           onChange={onInputChange}
           value={inputValue}
           className={styles.inputSearch}
@@ -169,11 +162,10 @@ const useDebounce = (fn: (...args: unknown[]) => void, duration: number) => {
 export default {
   title: "主题/Colors",
   parameters: {
-    fullscreen: true,
-    doc: {
-      story: {
-        iframeHeight: 800,
-        iframeWidth: 1800,
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
       },
     },
   },

@@ -89,4 +89,12 @@ export const Shadows = () => {
 
 export default {
   title: "主题/shadows",
+  parameters: {
+    docs: {
+      canvas: {
+        sourceState: "none",
+        withToolbar: false,
+      },
+    },
+  },
 };
