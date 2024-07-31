@@ -3,9 +3,6 @@ import { FishProvider } from "fish-ui-sy";
 import { Default } from "./Default.stories";
 // @ts-expect-error - required for ts
 import DefaultSource from "./Default.stories?raw";
-import { Nested } from "./Nested.stories";
-// @ts-expect-error - required for ts
-import NestedSource from "./Nested.stories?raw";
 
 const meta = {
   title: "组件/FishProvider",
@@ -23,17 +20,4 @@ export default meta;
   },
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-(Nested as any).parameters = {
-  docs: {
-    description: {
-      story:
-        "A Fluent provider can be nested to override some or all of a tokens.",
-    },
-  },
-  source: {
-    code: NestedSource,
-  },
-};
-
-export { Default, Nested };
+export { Default };
