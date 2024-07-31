@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "sk": "pnpm run storybook",
-    "sk-docs": "storybook dev --docs"
+    "sk-docs": "storybook dev --docs",
+    "build-storybook-docs": "storybook build --docs"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
