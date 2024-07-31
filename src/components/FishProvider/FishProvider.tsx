@@ -3,7 +3,7 @@
 // props 1-2层
 // context 深层次
 
-import { Theme } from "fish-ui-sy";
+import { Theme, webLightTheme } from "fish-ui-sy";
 import React from "react";
 import { useStyles } from "./useStyles.styles";
 
@@ -15,11 +15,11 @@ const ThemeContext = React.createContext<ThemeContextValue>(undefined);
 export type FishProviderProps = React.HTMLAttributes<
   React.ChildContextProvider<ThemeContextValue>
 > & {
-  theme: ThemeContextValue;
+  theme?: ThemeContextValue;
 };
 export const FishProvider = ({
   className,
-  theme,
+  theme = webLightTheme,
   children,
   ...restProps
 }: FishProviderProps) => {
