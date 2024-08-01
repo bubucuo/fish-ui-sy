@@ -17,7 +17,7 @@ export const scaffold = {
 
     const base = {
       "index.html": Vite.getHTML(),
-      "src/App.tsx": Vite.getApp(data),
+      "src/App.tsx": Vite.getApp(),
       "src/index.tsx": Vite.getRootIndex(),
       "src/example.tsx": Vite.getExample(data),
       "tsconfig.json": Vite.getTsconfig(),
@@ -258,10 +258,10 @@ function getExample(demoData: Data) {
   return demoData.storyFile;
 }
 
-function getApp(data: Data) {
+function getApp() {
   const code = dedent`
     import { FishProvider, webLightTheme } from 'fish-ui-sy';
-    import { ${data.storyExportToken} as Example } from './example';
+    import { default as Example } from './example';
 
     const App = () => {
         return (
