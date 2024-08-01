@@ -32,6 +32,7 @@ const actionConfig = {
 // 添加在线查看代码按钮
 export function addDemoActionButton(context: StoryContext) {
   const { container, cssClasses } = prepareSandboxContainer(context);
+
   const config = prepareData(context);
   if (!config) {
     // ! 不显示
@@ -57,7 +58,7 @@ function addActionButton(
   config: Data,
   classList: string[]
 ) {
-  const files = scaffold[config.bundler](config);
+  const files = scaffold(config);
   const action = actionConfig[config.provider];
 
   const button = document.createElement("button");

@@ -1,4 +1,4 @@
-import { useEffect } from "@storybook/addons";
+import { useEffect } from "react";
 import { addDemoActionButton } from "../sandbox-factory";
 
 import type { StoryContext } from "@storybook/types";

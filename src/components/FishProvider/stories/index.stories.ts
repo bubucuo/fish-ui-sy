@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 import { FishProvider } from "fish-ui-sy";
-import { Default } from "./Default.stories";
+import Default from "./Default.stories";
 // @ts-expect-error - required for ts
 import DefaultSource from "./Default.stories?raw";
-import { Nested } from "./Nested.stories";
+import Nested from "./Nested.stories";
 // @ts-expect-error - required for ts
 import NestedSource from "./Nested.stories?raw";
 

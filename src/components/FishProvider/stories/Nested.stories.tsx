@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const Nested = () => {
+const Nested = () => {
   const styles = useStyles();
   return (
     <FishProvider>
@@ -47,3 +47,5 @@ function Child() {
     </div>
   );
 }
+
+export default Nested;
