@@ -14,6 +14,11 @@ export default defineConfig({
     react(),
     dts({
       rollupTypes: true,
+      beforeWriteFile(filePath) {
+        return {
+          filePath: filePath.endsWith(".d.ts") ? filePath : `${filePath}.d.ts`,
+        };
+      },
     }),
   ],
   resolve: {
