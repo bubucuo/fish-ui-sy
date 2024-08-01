@@ -1,12 +1,26 @@
 {
   "name": "fish-ui-sy",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.5.0",
+  "author": "bubucuo",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bubucuo/fish-ui-sy"
+  },
+  "main": "dist/fish-ui-sy.cjs.js",
+  "module": "dist/fish-ui-sy.es.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "build": "tsc -b && vite build",
+    "build": "vite build  && tsc -b",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
