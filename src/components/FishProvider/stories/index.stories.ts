@@ -29,9 +29,9 @@ export default meta;
     description: {
       story: "FishProvider可以嵌套使用。",
     },
-  },
-  source: {
-    code: NestedSource,
+    source: {
+      code: NestedSource,
+    },
   },
 };
 
