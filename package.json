@@ -1,7 +1,7 @@
 {
   "name": "fish-ui-sy",
   "private": false,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "bubucuo",
   "type": "module",
   "repository": {
@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "build": "vite build  && tsc -b",
+    "build": "vite build && tsc -b",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -40,10 +40,12 @@
     "@storybook/addon-interactions": "^8.2.4",
     "@storybook/addon-links": "^8.2.4",
     "@storybook/addon-onboarding": "^8.2.4",
+    "@storybook/addons": "^7.6.17",
     "@storybook/blocks": "^8.2.4",
     "@storybook/react": "^8.2.4",
     "@storybook/react-vite": "^8.2.4",
     "@storybook/test": "^8.2.4",
+    "@storybook/types": "^8.2.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.3",
@@ -51,6 +53,8 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "codesandbox-import-utils": "^2.2.3",
+    "dedent": "^1.5.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
@@ -59,6 +63,7 @@
     "storybook": "^8.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
+    "vite-plugin-dts": "4.0.0-beta.2",
     "vitest": "^2.0.5"
   }
 }

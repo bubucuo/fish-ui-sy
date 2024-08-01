@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import dts from "vite-plugin-dts";
 
 function resolve(str: string) {
   return path.resolve(__dirname, str);
@@ -9,7 +10,7 @@ function resolve(str: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), dts({ rollupTypes: true })],
   resolve: {
     alias: {
       "fish-ui-sy": path.resolve(__dirname, "./src/index.ts"),

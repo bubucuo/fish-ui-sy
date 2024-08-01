@@ -64,7 +64,10 @@ export const Colors = () => {
     [setTokensSearchResult]
   );
 
-  const updateSearchDebounced = useDebounce(searchToken, 220);
+  const updateSearchDebounced = useDebounce(
+    searchToken as (...args: unknown[]) => void,
+    220
+  );
 
   const onInputChange = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -143,8 +146,6 @@ export const Colors = () => {
     </>
   );
 };
-
-Colors.args = {};
 
 const useDebounce = (fn: (...args: unknown[]) => void, duration: number) => {
   const timeoutRef = React.useRef(0);
