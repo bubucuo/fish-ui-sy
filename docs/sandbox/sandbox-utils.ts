@@ -54,13 +54,6 @@ const addonConfigDefaults = {
 };
 export type Data = Pick<Required<ParametersConfig>, "provider"> & {
   storyFile: string;
-  // use originalStoryFn because users can override the `storyName` property.
-  // We need the name of the exported function, not the actual story
-  // https://github.com/microsoft/fluentui-storybook-addons/issues/12
-  // originalStoryFn.name someties looks like this: ProgressBarDefault_stories_Default
-  // just get the "Default"
-  // @TODO - im not sure this is still needed, wasn't able to repro. Can we remove it ?
-  storyExportToken: string;
   dependencies: Record<string, string>;
   title: string;
   description: string;
@@ -81,9 +74,7 @@ export function prepareData(context: StoryContext): Data | null {
   const storyFile = context.parameters?.docs.source?.code;
 
   if (!storyFile) {
-    console.error(
-      dedent`Export to Sandbox Addon: Couldn't find source for story ${context.story}. Did you install the babel plugin?`
-    );
+    // 没有源代码，不显示在线编辑按钮
     return null;
   }
 
@@ -98,23 +89,8 @@ export function prepareData(context: StoryContext): Data | null {
   const title = "bubucuo";
   const description = `Story demo: ${context.title} - ${context.name}`;
 
-  // use originalStoryFn because users can override the `storyName` property.
-  // We need the name of the exported function, not the actual story
-  // https://github.com/microsoft/fluentui-storybook-addons/issues/12
-  // originalStoryFn.name someties looks like this: ProgressBarDefault_stories_Default
-  // just get the "Default"
-  // @TODO - im not sure this is still needed, wasn't able to repro. Can we remove it ?
-  const storyExportToken = context.originalStoryFn.name
-    .split("_stories_")
-    .slice(-1)
-    .pop();
-  if (!storyExportToken) {
-    throw new Error("issues processing story export token");
-  }
-
   const demoData = {
     storyFile,
-    storyExportToken,
     provider,
     dependencies,
     title,
