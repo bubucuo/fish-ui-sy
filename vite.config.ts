@@ -10,17 +10,7 @@ function resolve(str: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      rollupTypes: true,
-      beforeWriteFile(filePath) {
-        return {
-          filePath: filePath.endsWith(".d.ts") ? filePath : `${filePath}.d.ts`,
-        };
-      },
-    }),
-  ],
+  plugins: [react(), dts()],
   resolve: {
     alias: {
       "fish-ui-sy": path.resolve(__dirname, "./src/index.ts"),
