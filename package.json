@@ -32,7 +32,8 @@
     "@ctrl/tinycolor": "^4.1.0",
     "@griffel/react": "^1.5.25",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite-plugin-dts": "4.0.0-beta.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -59,7 +60,6 @@
     "storybook": "^8.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
-    "vite-plugin-dts": "4.0.0",
     "vitest": "^2.0.5"
   }
 }
