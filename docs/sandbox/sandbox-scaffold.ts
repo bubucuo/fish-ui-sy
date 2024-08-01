@@ -9,53 +9,28 @@ const commonDevDeps = {
   typescript: "^5.2.2",
 };
 
-export const scaffold = {
-  vite: (data: Data): Record<string, string> => {
-    if (data.provider === "codesandbox-browser") {
-      throw new Error("vite is not supported on codesandbox-browser");
-    }
+export const scaffold = (data: Data): Record<string, string> => {
+  if (data.provider === "codesandbox-browser") {
+    throw new Error("vite is not supported on codesandbox-browser");
+  }
 
-    const base = {
-      "index.html": Vite.getHTML(),
-      "src/App.tsx": Vite.getApp(),
-      "src/index.tsx": Vite.getRootIndex(),
-      "src/example.tsx": Vite.getExample(data),
-      "tsconfig.json": Vite.getTsconfig(),
-      "tsconfig.node.json": Vite.getTsconfigNode(),
-      "vite.config.ts": Vite.getViteCfg(),
-      "package.json": Vite.getPkgJson(data),
-    };
-    if (data.provider === "stackblitz-cloud") {
-      Object.assign(base, getStackblitzConfig());
-    }
-    if (data.provider === "codesandbox-cloud") {
-      Object.assign(base, getCodesandboxConfig("vite"));
-    }
-    return base;
-  },
-  cra: (data: Data): Record<string, string> => {
-    const base = {
-      "public/index.html": CRA.getHTML(),
-      "src/App.tsx": CRA.getApp(data),
-      "src/index.tsx": CRA.getRootIndex(),
-      "src/example.tsx": CRA.getExample(data),
-      "tsconfig.json": CRA.getTsconfig(),
-      "package.json": CRA.getPkgJson(data),
-    };
-    if (data.provider === "stackblitz-cloud") {
-      Object.assign(base, getStackblitzConfig());
-    }
-    if (data.provider === "codesandbox-cloud") {
-      Object.assign(base, getCodesandboxConfig("cra"));
-    }
-
-    console.log(
-      "%c [  ]-53",
-      "font-size:13px; background:pink; color:#bf2c9f;",
-      base
-    );
-    return base;
-  },
+  const base = {
+    "index.html": Vite.getHTML(),
+    "src/App.tsx": Vite.getApp(),
+    "src/index.tsx": Vite.getRootIndex(),
+    "src/example.tsx": Vite.getExample(data),
+    "tsconfig.json": Vite.getTsconfig(),
+    "tsconfig.node.json": Vite.getTsconfigNode(),
+    "vite.config.ts": Vite.getViteCfg(),
+    "package.json": Vite.getPkgJson(data),
+  };
+  if (data.provider === "stackblitz-cloud") {
+    Object.assign(base, getStackblitzConfig());
+  }
+  if (data.provider === "codesandbox-cloud") {
+    Object.assign(base, getCodesandboxConfig("vite"));
+  }
+  return base;
 };
 
 const Vite = {
@@ -151,47 +126,9 @@ const Vite = {
   },
 };
 
-const CRA = {
-  getHTML: () => `<div id="root"></div>`,
-  getRootIndex: getIndex,
-  getExample,
-  getApp,
-  getTsconfig: () =>
-    serializeJson({
-      include: ["./src/**/*"],
-      compilerOptions: {
-        strict: true,
-        esModuleInterop: true,
-        lib: ["dom", "es2015"],
-        jsx: "react-jsx",
-      },
-    }),
-  getPkgJson: (data: Data) => {
-    return serializeJson({
-      main: "src/index.tsx",
-      dependencies: {
-        ...data.dependencies,
-      },
-      devDependencies: {
-        ...commonDevDeps,
-        "react-scripts": "^5.0.0",
-        "@babel/plugin-proposal-private-property-in-object": "latest",
-      },
-      scripts: {
-        start: "react-scripts start",
-        build: "react-scripts build",
-        test: "react-scripts test --env=jsdom",
-        eject: "react-scripts eject",
-      },
-      browserslist: [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
-    });
-  },
-};
-
-function getCodesandboxConfig(kind: "cra" | "vite") {
+function getCodesandboxConfig(kind: "vite") {
   const startConfig = {
-    cra: { command: "yarn start", preview: { port: 3000 } },
-    vite: { command: "yarn dev", preview: { port: 5173 } },
+    vite: { command: "pnpm dev", preview: { port: 5173 } },
   };
   return {
     ".devcontainer/devcontainer.json": serializeJson({
@@ -206,7 +143,7 @@ function getCodesandboxConfig(kind: "cra" | "vite") {
       setupTasks: [
         {
           name: "Install Dependencies",
-          command: "yarn install",
+          command: "pnpm install",
         },
       ],
 
@@ -219,12 +156,12 @@ function getCodesandboxConfig(kind: "cra" | "vite") {
         },
         build: {
           name: "build",
-          command: "yarn build",
+          command: "pnpm build",
           runAtStart: false,
         },
         preview: {
           name: "preview",
-          command: "yarn preview",
+          command: "pnpm preview",
           runAtStart: false,
         },
       },

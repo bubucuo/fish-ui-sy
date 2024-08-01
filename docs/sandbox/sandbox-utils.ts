@@ -52,7 +52,7 @@ const addonConfigDefaults = {
   requiredDependencies: {},
   optionalDependencies: {},
 };
-export type Data = Pick<Required<ParametersConfig>, "provider" | "bundler"> & {
+export type Data = Pick<Required<ParametersConfig>, "provider"> & {
   storyFile: string;
   // use originalStoryFn because users can override the `storyName` property.
   // We need the name of the exported function, not the actual story
@@ -76,7 +76,7 @@ export function prepareData(context: StoryContext): Data | null {
     ...context.parameters.exportToSandbox,
   };
 
-  const { provider, bundler } = addonConfig;
+  const { provider } = addonConfig;
 
   const storyFile = context.parameters?.docs.source?.code;
 
@@ -116,7 +116,6 @@ export function prepareData(context: StoryContext): Data | null {
     storyFile,
     storyExportToken,
     provider,
-    bundler,
     dependencies,
     title,
     description,

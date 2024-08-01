@@ -14,7 +14,6 @@ const preview: Preview = {
     },
 
     exportToSandbox: {
-      bundler: "vite",
       requiredDependencies: {
         react: "^18",
         "react-dom": "^18",

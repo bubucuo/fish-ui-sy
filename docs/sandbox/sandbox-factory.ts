@@ -57,7 +57,7 @@ function addActionButton(
   config: Data,
   classList: string[]
 ) {
-  const files = scaffold[config.bundler](config);
+  const files = scaffold(config);
   const action = actionConfig[config.provider];
 
   const button = document.createElement("button");
