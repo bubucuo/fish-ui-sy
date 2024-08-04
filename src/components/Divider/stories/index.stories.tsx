@@ -81,8 +81,7 @@ import CustomStylesSource from "./DividerCustomStyles.stories?raw";
 (CustomStyles as any).parameters = {
   docs: {
     description: {
-      story:
-        "A divider can have custom styles applied to both the label and the line.",
+      story: "自定义样式。",
     },
     source: {
       code: CustomStylesSource,
@@ -93,20 +92,6 @@ import CustomStylesSource from "./DividerCustomStyles.stories?raw";
 export default {
   title: "组件/Divider",
   component: Divider,
-  decorators: [
-    (Story) => (
-      <FishProvider>
-        <div
-          style={{
-            padding: "48px 24px",
-            backgroundColor: tokens.colorNeutralBackground2,
-          }}
-        >
-          <Story />
-        </div>
-      </FishProvider>
-    ),
-  ],
 } as Meta;
 
 export { Default, Vertical, Appearance, Inset, AlignContent, CustomStyles };

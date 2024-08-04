@@ -6,7 +6,7 @@ import {
   useHorizontalStyles,
   useVerticalStyles,
 } from "./useDividerStyles.styles";
-import { ForwardRefComponent } from "fish-ui-sy";
+import type { ForwardRefComponent } from "fish-ui-sy";
 
 export type DividerProps = React.HTMLAttributes<HTMLDivElement> & {
   /**
