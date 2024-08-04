@@ -1,7 +1,6 @@
-// @@ts-expect-error - required for ts
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Meta } from "@storybook/react";
-import { Divider, FishProvider, tokens } from "fish-ui-sy";
+import { Divider } from "fish-ui-sy";
 import Default from "./DividerDefault.stories";
 import Vertical from "./DividerVertical.stories";
 import Appearance from "./DividerAppearance.stories";
