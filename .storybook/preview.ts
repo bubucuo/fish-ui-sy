@@ -3,6 +3,7 @@ import { useExportToSandboxButton } from "../docs/sandbox/decorators/with-export
 import "../docs/sandbox/styles.css";
 import { withFishProvider } from "../docs/src/withFishProvider";
 import { FishDocsPage } from "../docs/src/FishDocsPage.stories";
+import { THEME_ID } from "../docs/theme-addon";
 
 export const decorators = [withFishProvider, useExportToSandboxButton];
 
@@ -35,5 +36,7 @@ const preview: Preview = {
     },
   },
 };
+
+export const initialGlobals = { [THEME_ID]: undefined }; // allow theme to be set by URL query param
 
 export default preview;
