@@ -19,6 +19,7 @@ export const Label: ForwardRefComponent<LabelProps> = React.forwardRef(
     const styles = useStyles();
     return (
       <label
+        {...restProps}
         ref={ref as React.Ref<HTMLLabelElement>}
         className={mergeClasses(
           labelClassNames.root,
@@ -29,7 +30,6 @@ export const Label: ForwardRefComponent<LabelProps> = React.forwardRef(
           className
         )}
         aria-hidden="true"
-        {...restProps}
       >
         {children}
         {required && (
