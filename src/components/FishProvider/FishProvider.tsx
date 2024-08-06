@@ -12,9 +12,7 @@ type ThemeContextValue = Theme | Partial<Theme> | undefined;
 const ThemeContext = React.createContext<ThemeContextValue>(undefined);
 
 // 2. 创建一个provider
-export type FishProviderProps = React.HTMLAttributes<
-  React.ChildContextProvider<ThemeContextValue>
-> & {
+export type FishProviderProps = React.HTMLAttributes<HTMLDivElement> & {
   theme?: ThemeContextValue;
 };
 export const FishProvider = ({
@@ -25,8 +23,10 @@ export const FishProvider = ({
 }: FishProviderProps) => {
   const cls = useStyles({ className, theme });
   return (
-    <ThemeContext.Provider value={theme} {...restProps}>
-      <div className={cls}>{children}</div>
+    <ThemeContext.Provider value={theme}>
+      <div {...restProps} className={cls}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 };

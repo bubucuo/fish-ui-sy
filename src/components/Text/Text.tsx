@@ -18,6 +18,7 @@ export const Text: ForwardRefComponent<TextProps> = React.forwardRef(
       wrap = true,
       className,
       children,
+      ...restProps
     },
     ref
   ) => {
@@ -25,6 +26,7 @@ export const Text: ForwardRefComponent<TextProps> = React.forwardRef(
 
     return (
       <span
+        {...restProps}
         ref={ref as React.Ref<HTMLHeadingElement & HTMLPreElement>}
         className={mergeClasses(
           textClassNames.root,
