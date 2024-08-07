@@ -179,7 +179,7 @@ export default meta;
         "You can optionally provide a default value.",
     },
     source: {
-      code: AppearanceSource,
+      code: UncontrolledSource,
     },
   },
 };
