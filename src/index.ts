@@ -7,4 +7,5 @@ export * from "./components/FishProvider";
 export * from "./components/Divider";
 export * from "./components/Text";
 export * from "./components/Label";
+export * from "./components/Input";
 export * from "@griffel/react";

@@ -3,7 +3,9 @@ import { ReactNode } from "react";
 /**
  * Label Props
  */
-export type LabelProps = React.HTMLAttributes<HTMLLabelElement> & {
+// export type LabelProps = React.HTMLAttributes<HTMLLabelElement> & {
+
+export type LabelProps = React.ComponentProps<"label"> & {
   /**
    * Renders the label as disabled
    * @default false
