@@ -1,4 +1,3 @@
-import React from "react";
 import { tokens, useId, Input, Label } from "fish-ui-sy";
 import { makeStyles, mergeClasses } from "@griffel/react";
 
@@ -13,18 +12,6 @@ const useStyles = makeStyles({
     gridRowGap: tokens.spacingVerticalXXS,
     marginTop: tokens.spacingVerticalMNudge,
     padding: tokens.spacingHorizontalMNudge,
-  },
-  filledLighter: {
-    backgroundColor: tokens.colorNeutralBackgroundInverted,
-    "> label": {
-      color: tokens.colorNeutralForegroundInverted2,
-    },
-  },
-  filledDarker: {
-    backgroundColor: tokens.colorNeutralBackgroundInverted,
-    "> label": {
-      color: tokens.colorNeutralForegroundInverted2,
-    },
   },
 });
 
@@ -50,14 +37,26 @@ const Appearance = () => {
         <Input appearance="underline" id={underlineId} />
       </div>
 
-      <div className={mergeClasses(styles.field, styles.filledLighter)}>
+      <div className={mergeClasses(styles.field)}>
         <Label htmlFor={filledLighterId}>Filled lighter appearance</Label>
         <Input appearance="filled-lighter" id={filledLighterId} />
       </div>
 
-      <div className={mergeClasses(styles.field, styles.filledDarker)}>
+      <div className={mergeClasses(styles.field)}>
         <Label htmlFor={filledDarkerId}>Filled darker appearance</Label>
         <Input appearance="filled-darker" id={filledDarkerId} />
+      </div>
+
+      <div className={mergeClasses(styles.field)}>
+        <Label htmlFor={filledLighterId2}>
+          Filled lighter shadow appearance
+        </Label>
+        <Input appearance="filled-lighter-shadow" id={filledLighterId} />
+      </div>
+
+      <div className={mergeClasses(styles.field)}>
+        <Label htmlFor={filledDarkerId2}>Filled darker shadow appearance</Label>
+        <Input appearance="filled-darker-shadow" id={filledDarkerId} />
       </div>
     </div>
   );

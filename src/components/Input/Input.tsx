@@ -20,7 +20,7 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
       type = "text",
       size = "medium",
       appearance = "outline",
-      defaultValue,
+      defaultValue, // 非受控组件
       value: _value = "",
       onChange,
       contentBefore,
@@ -42,12 +42,10 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
       contentStyles[size],
     ];
 
-    const contentBefore_isValidElement = React.isValidElement(contentBefore);
-    const contentAfter_isValidElement = React.isValidElement(contentAfter);
-
     const inputStyles = useInputElementStyles();
 
     const [value, setValue] = React.useState(_value);
+
     return (
       <span
         className={mergeClasses(
@@ -72,18 +70,16 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
           <span
             className={mergeClasses(
               inputClassNames.contentBefore,
-              ...contentClasses,
-              contentBefore_isValidElement && contentBefore.props.className
+              ...contentClasses
             )}
           >
-            {contentBefore_isValidElement
-              ? (contentBefore.props as React.ComponentProps<"span">).children
-              : contentBefore}
+            {contentBefore}
           </span>
         )}
 
         <input
           {...restProps}
+          type={type}
           ref={ref as React.Ref<HTMLInputElement>}
           className={mergeClasses(
             inputClassNames.input,
@@ -105,13 +101,10 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
           <span
             className={mergeClasses(
               inputClassNames.contentAfter,
-              ...contentClasses,
-              contentAfter_isValidElement && contentAfter.props.className
+              ...contentClasses
             )}
           >
-            {contentAfter_isValidElement
-              ? (contentAfter.props as React.ComponentProps<"span">).children
-              : contentAfter}
+            {contentAfter}
           </span>
         )}
       </span>

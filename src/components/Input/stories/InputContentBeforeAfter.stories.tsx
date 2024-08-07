@@ -13,14 +13,6 @@ const useStyles = makeStyles({
   },
 });
 
-export const MicRegular = () => {
-  return <div>MicRegular</div>;
-};
-
-export const PersonRegular = () => {
-  return <div>PersonRegular</div>;
-};
-
 const ContentBeforeAfter = () => {
   const styles = useStyles();
 
@@ -56,7 +48,7 @@ const ContentBeforeAfter = () => {
         <Label htmlFor={beforeAndAfterId}>Amount to pay</Label>
         <Input
           contentBefore={
-            <Text size={400} id={beforeLabelId}>
+            <Text size={800} id={beforeLabelId}>
               $
             </Text>
           }
