@@ -1,6 +1,11 @@
 import * as React from "react";
 import type { InputProps } from "./Input.types";
-import { mergeClasses, type ForwardRefComponent } from "fish-ui-sy";
+import {
+  mergeClasses,
+  useControllableState,
+  useEventCallback,
+  type ForwardRefComponent,
+} from "fish-ui-sy";
 import {
   inputClassNames,
   useContentClassName,
@@ -21,7 +26,7 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
       size = "medium",
       appearance = "outline",
       defaultValue, // 非受控组件
-      value: _value = "",
+      value: _value,
       onChange,
       contentBefore,
       contentAfter,
@@ -44,7 +49,11 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
 
     const inputStyles = useInputElementStyles();
 
-    const [value, setValue] = React.useState(_value);
+    const [value, setValue] = useControllableState({
+      defaultState: defaultValue,
+      state: _value,
+      initialState: "",
+    });
 
     return (
       <span
@@ -80,6 +89,7 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
         <input
           {...restProps}
           type={type}
+          disabled={disabled}
           ref={ref as React.Ref<HTMLInputElement>}
           className={mergeClasses(
             inputClassNames.input,
@@ -90,11 +100,11 @@ export const Input: ForwardRefComponent<InputProps> = React.forwardRef(
             disabled && inputStyles.disabled
           )}
           value={value}
-          onChange={(e) => {
+          onChange={useEventCallback((e) => {
             const newValue = e.target.value;
             onChange?.(e, { value: newValue });
             setValue(newValue);
-          }}
+          })}
         />
 
         {contentAfter && (

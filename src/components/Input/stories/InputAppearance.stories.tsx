@@ -51,12 +51,12 @@ const Appearance = () => {
         <Label htmlFor={filledLighterId2}>
           Filled lighter shadow appearance
         </Label>
-        <Input appearance="filled-lighter-shadow" id={filledLighterId} />
+        <Input appearance="filled-lighter-shadow" id={filledLighterId2} />
       </div>
 
       <div className={mergeClasses(styles.field)}>
         <Label htmlFor={filledDarkerId2}>Filled darker shadow appearance</Label>
-        <Input appearance="filled-darker-shadow" id={filledDarkerId} />
+        <Input appearance="filled-darker-shadow" id={filledDarkerId2} />
       </div>
     </div>
   );
