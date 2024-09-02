@@ -14,7 +14,7 @@ export default defineConfig({
     react(),
     dts({
       // 打包到一个index.d.ts文件中
-      rollupTypes: true,
+      // rollupTypes: true,
     }),
   ],
   resolve: {
