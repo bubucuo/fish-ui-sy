@@ -5,7 +5,10 @@ type ContentType = {
   contentAfter?: React.ReactNode;
 };
 
-export type InputProps = React.HTMLAttributes<HTMLInputElement> &
+export type InputProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "size"
+> &
   ContentType & {
     /**
      * 是否禁用输入框。
@@ -20,6 +23,7 @@ export type InputProps = React.HTMLAttributes<HTMLInputElement> &
     /** Input can't have children. */
     children?: never;
 
+    htmlSize?: number;
     /**
      * Size of the input (changes the font size and spacing).
      * @default 'medium'

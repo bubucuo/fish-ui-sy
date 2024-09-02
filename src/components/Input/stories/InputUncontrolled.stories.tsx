@@ -13,10 +13,10 @@ const useStyles = makeStyles({
   },
 });
 
-const onChange: InputProps["onChange"] = (ev, data) => {
+const onChange = ((ev, data) => {
   // Uncontrolled inputs can be notified of changes to the value
   console.log(`New value: "${data.value}"`);
-};
+}) as InputProps["onChange"];
 
 const Uncontrolled = () => {
   const inputId = useId("input");

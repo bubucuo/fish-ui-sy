@@ -1,9 +1,9 @@
 import React from "react";
-import { ForwardRefComponent, mergeClasses } from "fish-ui-sy";
+import { mergeClasses } from "fish-ui-sy";
 import type { LabelProps } from "fish-ui-sy";
 import { labelClassNames, useStyles } from "./useLabelStyles.styles";
 
-export const Label: ForwardRefComponent<LabelProps> = React.forwardRef(
+export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   (
     {
       disabled = false,
