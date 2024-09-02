@@ -5,10 +5,7 @@ type ContentType = {
   contentAfter?: React.ReactNode;
 };
 
-export type InputProps = Omit<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  "size"
-> &
+export type InputProps = React.HTMLAttributes<HTMLInputElement> &
   ContentType & {
     /**
      * 是否禁用输入框。
