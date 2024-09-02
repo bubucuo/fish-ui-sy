@@ -18,11 +18,11 @@ const Controlled = () => {
   const [value, setValue] = React.useState("initial value");
   const styles = useStyles();
 
-  const onChange = ((ev, data) => {
+  const onChange: InputProps["onChange"] = (ev, data) => {
     if (data.value.length <= 20) {
       setValue(data.value);
     }
-  }) as InputProps["onChange"];
+  };
 
   return (
     <div className={styles.root}>

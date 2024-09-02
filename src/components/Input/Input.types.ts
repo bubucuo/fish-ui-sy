@@ -7,7 +7,7 @@ type ContentType = {
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  "size"
+  "size" | "onChange"
 > &
   ContentType & {
     /**
