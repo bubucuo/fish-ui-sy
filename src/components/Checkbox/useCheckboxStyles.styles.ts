@@ -1,11 +1,10 @@
+import { tokens, CheckboxProps } from "fish-ui-sy";
 import {
-  tokens,
   makeResetStyles,
   makeStyles,
   mergeClasses,
-  CheckboxProps,
-} from "fish-ui-sy";
-import { shorthands } from "@griffel/react";
+  shorthands,
+} from "@griffel/react";
 
 export const checkboxClassNames = {
   root: "fish-ui-Checkbox",
