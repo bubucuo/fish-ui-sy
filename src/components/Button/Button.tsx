@@ -1,6 +1,7 @@
 import "./button.css";
 
-export interface ButtonProps {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Is this the principal call to action on the page?
    */
@@ -16,7 +17,7 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  label?: string;
   /**
    * Optional click handler
    */
@@ -31,6 +32,7 @@ export const Button = ({
   size = "medium",
   backgroundColor,
   label,
+  children,
   ...props
 }: ButtonProps) => {
   const mode = primary
@@ -45,7 +47,7 @@ export const Button = ({
       style={{ backgroundColor }}
       {...props}
     >
-      {label}gaoshaoyun
+      {label || children}
     </button>
   );
 };

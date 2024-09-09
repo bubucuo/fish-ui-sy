@@ -90,7 +90,6 @@ export const FishDocsPage = () => {
           </HeaderMdx>
           <Primary />
           <ArgTypes />
-
           <Stories includePrimary={false} />
         </div>
       </div>
