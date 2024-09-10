@@ -10,4 +10,5 @@ export * from "./components/Label";
 export * from "./components/Input";
 export * from "./components/Checkbox";
 export * from "./components/Radio";
+export * from "./components/Select";
 export * from "@griffel/react";
