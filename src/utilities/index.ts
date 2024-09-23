@@ -4,3 +4,4 @@ export { useId } from "./useId";
 export * from "./ssr";
 export * from "./hooks";
 export * from "./utils";
+export * from "./focus";

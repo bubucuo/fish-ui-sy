@@ -105,6 +105,9 @@ importers:
       eslint-plugin-storybook:
         specifier: ^0.8.0
         version: 0.8.0(eslint@8.57.0)(typescript@5.5.4)
+      fish-ui-sy-react-icons:
+        specifier: ^0.2.0
+        version: 0.2.0(react@18.3.1)
       jsdom:
         specifier: ^24.1.1
         version: 24.1.1
@@ -2380,6 +2383,11 @@ packages:
   find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
     engines: {node: '>=10'}
+
+  fish-ui-sy-react-icons@0.2.0:
+    resolution: {integrity: sha512-dPnNOFsEK5V5R+u9zXjscx6HTuDH2pcsOSj+yAT8TAuI/s/IyAxeCW9YAVF8APxwnKh9Nz+st1JHB+0hIcjxkw==}
+    peerDependencies:
+      react: '>=16.8.0 <19.0.0'
 
   flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
@@ -6834,6 +6842,12 @@ snapshots:
     dependencies:
       locate-path: 6.0.0
       path-exists: 4.0.0
+
+  fish-ui-sy-react-icons@0.2.0(react@18.3.1):
+    dependencies:
+      '@griffel/react': 1.5.25(react@18.3.1)
+      react: 18.3.1
+      tslib: 2.6.3
 
   flat-cache@3.2.0:
     dependencies:
