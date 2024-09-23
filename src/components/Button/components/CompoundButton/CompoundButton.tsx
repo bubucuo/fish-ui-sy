@@ -1,10 +1,10 @@
 import React from "react";
 import { ForwardRefComponent } from "fish-ui-sy";
-import { ButtonProps } from "./Button.types";
-import { useButtonStyles } from "./useButtonStyles.styles";
+import { CompoundButtonProps } from "./CompoundButton.types";
+import { useCompoundButtonStyles } from "./useCompoundButtonStyles.styles";
 
-export const Button: ForwardRefComponent<ButtonProps> = React.forwardRef(
-  (props, ref) => {
+export const CompoundButton: ForwardRefComponent<CompoundButtonProps> =
+  React.forwardRef((props, ref) => {
     const {
       appearance = "secondary",
       disabled = false,
@@ -14,12 +14,13 @@ export const Button: ForwardRefComponent<ButtonProps> = React.forwardRef(
       shape = "rounded",
       size = "medium",
       children,
+      secondaryContent,
       ...restProps
     } = props;
 
     const iconOnly = !!(!children && icon);
 
-    const styles = useButtonStyles({
+    const styles = useCompoundButtonStyles({
       appearance,
       disabled,
       disabledFocusable,
@@ -42,11 +43,15 @@ export const Button: ForwardRefComponent<ButtonProps> = React.forwardRef(
         ref={ref as React.Ref<HTMLButtonElement & HTMLAnchorElement>}
       >
         {iconPosition === "before" && Icon}
-        {children}
+        <span className={styles.contentContainer}>
+          {children}
+          {secondaryContent && (
+            <span className={styles.secondaryContent}>{secondaryContent}</span>
+          )}
+        </span>
         {iconPosition === "after" && Icon}
       </button>
     );
-  }
-);
+  });
 
-Button.displayName = "Button";
+CompoundButton.displayName = "CompoundButton";

@@ -550,7 +550,7 @@ const useIconStyles = makeStyles({
   },
 });
 
-export const useButtonStyles = (props: ButtonProps) => {
+export const useButtonStyles = (props: ButtonProps & { iconOnly: boolean }) => {
   const rootBaseClassName = useRootBaseClassName();
   const iconBaseClassName = useIconBaseClassName();
 
@@ -569,10 +569,8 @@ export const useButtonStyles = (props: ButtonProps) => {
     shape,
     size,
     className,
-    children,
+    iconOnly,
   } = props;
-
-  const iconOnly = !children && icon;
 
   const styles = {
     root: undefined as string | undefined, //button
