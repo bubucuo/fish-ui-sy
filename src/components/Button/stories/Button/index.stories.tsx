@@ -27,7 +27,7 @@ import DisabledSource from "./ButtonDisabled.stories.tsx?raw";
 import WithLongTextSource from "./ButtonWithLongText.stories.tsx?raw";
 
 const meta: Meta = {
-  title: "组件/Button",
+  title: "组件/Button/Button",
   component: Button,
   parameters: {
     docs: {
