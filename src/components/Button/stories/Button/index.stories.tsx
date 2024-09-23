@@ -17,13 +17,13 @@ import DefaultSource from "./ButtonDefault.stories.tsx?raw";
 import ShapeSource from "./ButtonShape.stories.tsx?raw";
 /*  @ts-expect-error - required for ts*/
 import AppearanceSource from "./ButtonAppearance.stories.tsx?raw";
-// /*  @ts-expect-error - required for ts*/
+/*  @ts-expect-error - required for ts*/
 import IconSource from "./ButtonIcon.stories.tsx?raw";
-// /*  @ts-expect-error - required for ts*/
+/*  @ts-expect-error - required for ts*/
 import SizeSource from "./ButtonSize.stories.tsx?raw";
-// /*  @ts-expect-error - required for ts*/
+/*  @ts-expect-error - required for ts*/
 import DisabledSource from "./ButtonDisabled.stories.tsx?raw";
-// /*  @ts-expect-error - required for ts*/
+/*  @ts-expect-error - required for ts*/
 import WithLongTextSource from "./ButtonWithLongText.stories.tsx?raw";
 
 const meta: Meta = {
@@ -62,7 +62,6 @@ export default meta;
     source: {
       code: AppearanceSource,
     },
-
     description: {
       story:
         "- `(undefined)`: the button appears with the default style\n" +
