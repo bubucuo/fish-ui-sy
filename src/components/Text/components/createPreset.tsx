@@ -13,13 +13,13 @@ export function createPreset(
   options: Options
 ): React.FunctionComponent<TextPresetProps> {
   const { useStyles, displayName } = options;
-  const className = `fish-ui-${displayName}`;
-  const Wrapper = (props: TextPresetProps) => {
+  const _className = `fish-ui-${displayName}`;
+  const Wrapper = ({ className, ...restProps }: TextPresetProps) => {
     const styles = useStyles();
 
-    const cls = mergeClasses(className, styles.root, className);
+    const cls = mergeClasses(_className, styles.root, className);
 
-    return <Text className={cls} {...props} />;
+    return <Text {...restProps} className={cls} />;
   };
 
   Wrapper.displayName = displayName;

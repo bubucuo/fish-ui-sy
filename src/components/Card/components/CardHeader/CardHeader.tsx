@@ -17,9 +17,8 @@ export const CardHeader: ForwardRefComponent<CardHeaderProps> =
         ref={ref as React.Ref<HTMLDivElement>}
         className={styles.root}
       >
-        {image && (
-          <img src={image.src} alt={image.alt} className={styles.image} />
-        )}
+        {image && <div className={styles.image}>{image}</div>}
+
         {header && <div className={styles.header}>{header}</div>}
         {description && <div className={styles.description}>{description}</div>}
         {action && <div className={styles.action}>{action}</div>}

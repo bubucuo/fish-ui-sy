@@ -29,11 +29,7 @@ const Default = () => {
     <div className={styles.container}>
       <CardHeader
         className={styles.header}
-        image={{
-          as: "img",
-          src: powerpointLogoURL,
-          alt: "Microsoft PowerPoint logo",
-        }}
+        image={<img src={powerpointLogoURL} alt="Microsoft PowerPoint logo" />}
         header={
           <Body1>
             <b>App Name</b>
@@ -68,11 +64,7 @@ const Default = () => {
 
       <CardHeader
         className={styles.header}
-        image={{
-          as: "img",
-          src: powerpointLogoURL,
-          alt: "Microsoft PowerPoint logo",
-        }}
+        image={<img src={powerpointLogoURL} alt="Microsoft PowerPoint logo" />}
         header={
           <Body1>
             <b>App Name</b>
@@ -89,11 +81,7 @@ const Default = () => {
 
       <CardHeader
         className={styles.header}
-        image={{
-          as: "img",
-          src: powerpointLogoURL,
-          alt: "Microsoft PowerPoint logo",
-        }}
+        image={<img src={powerpointLogoURL} alt="Microsoft PowerPoint logo" />}
         header={
           <Body1>
             <b>App Name</b>
@@ -130,11 +118,7 @@ const Default = () => {
 
       <CardHeader
         className={styles.header}
-        image={{
-          as: "img",
-          src: powerpointLogoURL,
-          alt: "Microsoft PowerPoint logo",
-        }}
+        image={<img src={powerpointLogoURL} alt="Microsoft PowerPoint logo" />}
         header={
           <Body1>
             <b>App Name</b>
