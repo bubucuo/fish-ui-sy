@@ -7,7 +7,11 @@ const Gap: React.FC = () => {
 
   return (
     <Flex gap="medium" vertical>
-      <RadioGroup value={gapSize} onChange={(e) => setGapSize(e.target.value)}>
+      <RadioGroup
+        value={gapSize}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onChange={(e: any) => setGapSize(e.target.value)}
+      >
         {["small", "medium", "large", "customize"].map((size) => (
           <Radio key={size} value={size} label={size} />
         ))}

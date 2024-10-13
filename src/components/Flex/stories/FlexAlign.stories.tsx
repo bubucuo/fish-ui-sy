@@ -33,7 +33,8 @@ const Align = () => {
 
       <RadioGroup
         value={justify}
-        onChange={(e) => setJustify(e.target.value)}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onChange={(e: any) => setJustify(e.target.value)}
         layout="horizontal"
       >
         {justifyOptions.map((option) => (
@@ -44,7 +45,8 @@ const Align = () => {
       <p>Select align :</p>
       <RadioGroup
         value={alignItems}
-        onChange={(e) => setAlignItems(e.target.value)}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onChange={(e: any) => setAlignItems(e.target.value)}
         layout="horizontal"
       >
         {alignOptions.map((option) => (

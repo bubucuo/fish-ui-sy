@@ -13,7 +13,8 @@ const Default = () => {
     <Flex gap="medium" vertical>
       <RadioGroup
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onChange={(e: any) => setValue(e.target.value)}
         layout="horizontal"
       >
         <Radio value="horizontal" label="horizontal" />
