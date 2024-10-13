@@ -40,6 +40,7 @@ const useRootBaseClassName = makeResetStyles({
 
   margin: 0,
   overflow: "hidden",
+  height: "32px",
 
   backgroundColor: tokens.colorNeutralBackground1,
   color: tokens.colorNeutralForeground1,

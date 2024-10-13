@@ -12,4 +12,5 @@ export * from "./components/Checkbox";
 export * from "./components/Radio";
 export * from "./components/Select";
 export * from "./components/Card";
+export * from "./components/Flex";
 export * from "@griffel/react";
