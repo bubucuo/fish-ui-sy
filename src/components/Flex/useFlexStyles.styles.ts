@@ -33,12 +33,11 @@ export const useFlexStyles = (props: FlexProps) => {
   const { className, gap, vertical = false } = props;
 
   const _styles = useStyles();
-  const root = useStyles().root;
   const gapStyles = useGapStyles();
   const styles = {
     root: mergeClasses(
       flexClassNames.root,
-      root,
+      _styles.root,
       vertical && _styles.vertical,
       isPresetSize(gap) && gapStyles[gap],
       className
