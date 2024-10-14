@@ -13,4 +13,5 @@ export * from "./components/Radio";
 export * from "./components/Select";
 export * from "./components/Card";
 export * from "./components/Flex";
+export * from "./components/Space";
 export * from "@griffel/react";
