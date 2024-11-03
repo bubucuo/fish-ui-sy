@@ -178,7 +178,7 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
     if (watermarkInfo) {
       appendWatermark(watermarkInfo[0], watermarkInfo[1], container.current!);
     }
-  }, [watermarkInfo, container]);
+  }, [watermarkInfo]);
   // ============================= Render =============================
   const styles = useWatermarkStyles({
     className,
