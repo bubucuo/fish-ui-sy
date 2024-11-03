@@ -113,7 +113,7 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
         drawContent?: NonNullable<WatermarkProps["content"]> | HTMLImageElement
       ) => {
         // 绘制水印
-        const [nextClips, cliWith] = getClips(
+        const [nextClips, clipWith] = getClips(
           drawContent || "",
           rotate,
           ratio,
@@ -129,7 +129,7 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
           gapX,
           gapY
         );
-        setWatermarkInfo([nextClips, cliWith]);
+        setWatermarkInfo([nextClips, clipWith]);
       };
       if (image) {
         // 绘制图片水印

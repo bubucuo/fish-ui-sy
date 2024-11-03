@@ -28,7 +28,7 @@ function prepareCanvas(
  * Get single clips
  */
 export default function getClips(
-  content: NonNullable<WatermarkProps["content"]> | HTMLImageElement,
+  content: NonNullable<WatermarkProps["content"]> | HTMLImageElement, // string | string[] | image
   rotate: number,
   ratio: number,
   width: number,
