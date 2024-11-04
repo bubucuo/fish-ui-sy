@@ -151,7 +151,7 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
   };
 
   // ============================= Effect =============================
-  // Append watermark to the container
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(renderWatermark, [
     rotate,
     zIndex,
@@ -172,12 +172,14 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
 
   const container = useRef<HTMLDivElement>(null);
 
+  // Append watermark to the container
   const [appendWatermark] = useWatermark(markStyle);
 
   useEffect(() => {
     if (watermarkInfo) {
       appendWatermark(watermarkInfo[0], watermarkInfo[1], container.current!);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [watermarkInfo]);
   // ============================= Render =============================
   const styles = useWatermarkStyles({
