@@ -4,7 +4,6 @@ import raf from "./raf";
 /**
  * Callback will only execute last one for each raf
  */
-// 防抖
 export default function useRafDebounce(callback: VoidFunction) {
   const executeRef = React.useRef(false);
   const rafRef = React.useRef<number>();
