@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { WatermarkProps } from "./Watermark.types";
 import { useWatermarkStyles } from "./useWatermarkStyles.styles";
-import { getPixelRatio } from "./utils";
+import { getPixelRatio, reRendering } from "./utils";
 import useWatermark, { FontGap } from "./hooks/useWatermark";
 import getClips from "./hooks/getClips";
+import useMutateObserver from "./hooks/useMutateObserver";
+import useRafDebounce from "./hooks/useRafDebounce";
 
 export const Watermark: React.FC<WatermarkProps> = (props) => {
   const {
@@ -151,8 +153,10 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
   };
 
   // ============================= Effect =============================
+
+  const syncWatermark = useRafDebounce(renderWatermark);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(renderWatermark, [
+  useEffect(syncWatermark, [
     rotate,
     zIndex,
     width,
@@ -173,7 +177,7 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
   const container = useRef<HTMLDivElement>(null);
 
   // Append watermark to the container
-  const [appendWatermark] = useWatermark(markStyle);
+  const [appendWatermark, isWatermarkEle] = useWatermark(markStyle);
 
   useEffect(() => {
     if (watermarkInfo) {
@@ -181,6 +185,18 @@ export const Watermark: React.FC<WatermarkProps> = (props) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [watermarkInfo]);
+
+  // ============================ Observe =============================
+  const onMutate = (mutations: MutationRecord[]) => {
+    mutations.forEach((mutation) => {
+      if (reRendering(mutation, isWatermarkEle)) {
+        syncWatermark();
+      }
+    });
+  };
+
+  useMutateObserver(container.current as HTMLElement, onMutate);
+
   // ============================= Render =============================
   const styles = useWatermarkStyles({
     className,

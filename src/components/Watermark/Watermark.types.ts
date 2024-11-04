@@ -1,6 +1,9 @@
 import * as React from "react";
-
-export type WatermarkProps = React.HTMLAttributes<HTMLDivElement> & {
+export type WatermarkProps = Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "content"
+> & {
+  // export type WatermarkProps = React.HTMLAttributes<HTMLDivElement> & {
   /**
    * The width of the watermark, the default value of content is its own width
    * @default 120

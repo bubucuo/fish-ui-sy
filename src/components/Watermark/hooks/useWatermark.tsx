@@ -17,7 +17,7 @@ export type AppendWatermark = (
 
 export default function useWatermark(
   markStyle: React.CSSProperties
-): [appendWatermark: AppendWatermark] {
+): [appendWatermark: AppendWatermark, isWatermarkEle: (ele: Node) => boolean] {
   const watermarkMap = React.useRef(new Map<HTMLElement, HTMLDivElement>());
 
   const appendWatermark = (
@@ -45,5 +45,9 @@ export default function useWatermark(
     }
   };
 
-  return [appendWatermark];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const isWatermarkEle = (ele: any) =>
+    Array.from(watermarkMap.current.values()).includes(ele);
+
+  return [appendWatermark, isWatermarkEle];
 }
