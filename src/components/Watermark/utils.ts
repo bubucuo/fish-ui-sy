@@ -6,8 +6,8 @@ export function toLowercaseSeparator(key: string) {
 export function getStyleStr(style: React.CSSProperties): string {
   return Object.keys(style)
     .map(
-      (key: keyof React.CSSProperties) =>
-        `${toLowercaseSeparator(key)}: ${style[key]};`
+      (key) =>
+        `${toLowercaseSeparator(key)}: ${style[key as keyof React.CSSProperties]};`
     )
     .join(" ");
 }
@@ -20,6 +20,7 @@ export function getPixelRatio() {
 /** Whether to re-render the watermark */
 export const reRendering = (
   mutation: MutationRecord,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   isWatermarkEle: (ele: any) => boolean
 ) => {
   let flag = false;
