@@ -1,0 +1,210 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Divider > renders a brand appearance 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___1s2v3g1_z0k9po0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq f16muhyy fcbuu2a f1wdw2dr f1582fpk f1ttio3w f1ahrvm8 f1cd3wbc fvrapl0 f17hbk9y fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Brand
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a default divider 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___14drqcq_2rxt2r0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k fzynn9s fekrn8e f1kyqvp9 fesgyo"
+    role="separator"
+  />
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a divider with a different color 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___14drqcq_2rxt2r0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k fzynn9s fekrn8e f1kyqvp9 fesgyo"
+    color="#FF00FF"
+    role="separator"
+  />
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a divider with content 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___k99loo0_1xus583 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Default Divider
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a divider with inset 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___1jm1swq_2g7wur0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k fjlbh76 f11qrl6u f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Inset
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a horizontal divider with a fixed width 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___k99loo0_1xus583 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+    style="width: 100px;"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      fixed 100px width
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a strong appearance 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___4b1vy60_i5d1v70 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq f19n0e5 f10tv6oz f16xp3sf fwrmqbx f1seuxxq ft83z1f f1g4150c f1qnawh6 f192dr6e fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Strong
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a subtle appearance 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___1wuyj2x_z2asej0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq f11d4kpn f5g06un f13sxdku f1x6bl8t f1n015lb fvod1wy fwslg65 f103fvts flk0e17 fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Subtle
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a vertical divider 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="fish-ui-Divider ___1esnkk0_1l2hrfi f122n59 f1ewtqcl f22iagw f1vx9l62 fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q f16gbxbe f1yq6w5o f9sc749 fhkwbjy flthirb f13hvwk3 f19onpk6 f1kyqvp9 fesgyo fzynn9s fekrn8e"
+    role="separator"
+  />
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a vertical divider with a fixed height 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="fish-ui-Divider ___1dxp8rc_z44eys0 f122n59 f1ewtqcl f22iagw f1vx9l62 fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q f1tjaq3g f1yq6w5o f9sc749 fhkwbjy flthirb f13hvwk3 f19onpk6 fg2pwug f8vk40g"
+    role="separator"
+    style="height: 100px;"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      fixed 100px height
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders a vertical divider with content 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="fish-ui-Divider ___1dxp8rc_z44eys0 f122n59 f1ewtqcl f22iagw f1vx9l62 fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q f1tjaq3g f1yq6w5o f9sc749 fhkwbjy flthirb f13hvwk3 f19onpk6 fg2pwug f8vk40g"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Vertical
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders content center aligned 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___k99loo0_1xus583 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Center
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders content end aligned 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___1i7rgiq_y8sb2h0 f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f1wl9k8s fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1ojjlep f13zj6fq f12w1bnb f1ayce8x"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      End
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Divider > renders content start aligned 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="fish-ui-Divider ___gl6xq10_1p2eutt f122n59 f1ewtqcl f22iagw f1063pyq fqerorx f10pi13n fk6fouc fy9rknc figsok6 fwrc4pm f17mccla fyl8oag f16vkdww fhsnbul f1gw3sf2 f1ly5f7u f1s3tz6t f13zj6fq fkfq4zb f1vccso1 f1geml7w f1r7kh1m fjml6kk f16j7guv fx01ahm fl8d8yv fj1a37q fly5x3f f163fonl f51yk4v f13rof3u f8rth92 f6czdpx f1iyka9k f1wl9k8s f1ojjlep f1he2m4d f12w1bnb"
+    role="separator"
+  >
+    <span
+      class="fish-ui-Divider__wrapper"
+    >
+      Start
+    </span>
+  </div>
+</DocumentFragment>
+`;

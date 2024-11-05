@@ -10,7 +10,13 @@ function resolve(str: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts({
+      // 打包到一个index.d.ts文件中
+      // rollupTypes: true,
+    }),
+  ],
   resolve: {
     alias: {
       "fish-ui-sy": path.resolve(__dirname, "./src/index.ts"),

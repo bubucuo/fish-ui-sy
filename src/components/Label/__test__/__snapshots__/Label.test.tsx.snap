@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Label > renders a custom asterisk 1`] = `
+<body>
+  <div>
+    <label
+      aria-hidden="true"
+      class="fish-ui-Label ___1yevxz2_yljzsa0 fk6fouc f19n0e5 fkhj508 f1i3iumi"
+      data-testid="label-id"
+    >
+      I'm a label
+      <span
+        class="fish-ui-Label__required ___di7pjm0_79xo450 f1whyuy6 fruq291"
+      >
+        foo
+      </span>
+    </label>
+  </div>
+</body>
+`;
+
+exports[`Label > renders a default state 1`] = `
+<div>
+  <label
+    aria-hidden="true"
+    class="fish-ui-Label ___1yevxz2_yljzsa0 fk6fouc f19n0e5 fkhj508 f1i3iumi"
+  >
+    Default Label
+  </label>
+</div>
+`;

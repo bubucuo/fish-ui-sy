@@ -10,10 +10,6 @@ const commonDevDeps = {
 };
 
 export const scaffold = (data: Data): Record<string, string> => {
-  if (data.provider === "codesandbox-browser") {
-    throw new Error("vite is not supported on codesandbox-browser");
-  }
-
   const base = {
     "index.html": Vite.getHTML(),
     "src/App.tsx": Vite.getApp(),
@@ -128,7 +124,7 @@ const Vite = {
 
 function getCodesandboxConfig(kind: "vite") {
   const startConfig = {
-    vite: { command: "pnpm dev", preview: { port: 5173 } },
+    vite: { command: "yarn dev", preview: { port: 5173 } },
   };
   return {
     ".devcontainer/devcontainer.json": serializeJson({
@@ -143,7 +139,7 @@ function getCodesandboxConfig(kind: "vite") {
       setupTasks: [
         {
           name: "Install Dependencies",
-          command: "pnpm install",
+          command: "yarn install",
         },
       ],
 
@@ -156,12 +152,12 @@ function getCodesandboxConfig(kind: "vite") {
         },
         build: {
           name: "build",
-          command: "pnpm build",
+          command: "yarn build",
           runAtStart: false,
         },
         preview: {
           name: "preview",
-          command: "pnpm preview",
+          command: "yarn preview",
           runAtStart: false,
         },
       },
