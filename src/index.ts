@@ -16,4 +16,5 @@ export * from "./components/Flex";
 export * from "./components/Space";
 export * from "./components/Watermark";
 export * from "./components/MessageBar";
+export * from "./components/Portal";
 export * from "@griffel/react";
