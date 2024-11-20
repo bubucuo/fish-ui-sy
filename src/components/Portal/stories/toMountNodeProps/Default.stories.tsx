@@ -66,9 +66,4 @@ export const Default = () => {
   );
 };
 
-// export default {
-//   title: "组件/Portal/toMountNodeProps",
-//   component: Default,
-// };
-
 export default Default;
