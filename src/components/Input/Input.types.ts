@@ -74,7 +74,7 @@ export type InputProps = Omit<
      * based on the type of value the user will enter.
      *
      * Note that no custom styling is currently applied for alternative types, and some types may
-     * activate browser-default styling which does not match the Fluent design language.
+     * activate browser-default styling which does not match the Fish design language.
      *
      * (For non-text-based types such as `button` or `checkbox`, use the appropriate component or an
      * `<input>` element instead.)
