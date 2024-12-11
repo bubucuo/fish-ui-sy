@@ -11,6 +11,9 @@ const useBaseStyles = makeStyles({
     color: tokens.colorNeutralForeground1,
     backgroundColor: tokens.colorNeutralBackground1,
     textAlign: "left",
+    "& a": {
+      color: tokens.colorBrandBackground,
+    },
   },
 });
 

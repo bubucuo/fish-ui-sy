@@ -1,0 +1,1 @@
+            {columns.map((column, index) => {

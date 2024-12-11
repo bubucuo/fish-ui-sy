@@ -18,4 +18,5 @@ export * from "./components/Watermark";
 export * from "./components/MessageBar";
 export * from "./components/Portal";
 export * from "./components/Dialog";
+export * from "./components/Table";
 export * from "@griffel/react";
