@@ -1,4 +1,4 @@
-import { ColumnsType, GetRowKey } from "../interface";
+import type { ColumnsType, GetRowKey } from "../interface";
 
 /**
  * TableBody Props
