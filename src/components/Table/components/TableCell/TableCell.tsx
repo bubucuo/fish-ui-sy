@@ -16,14 +16,21 @@ export const TableCell = <RecordType,>(props: TableCellProps<RecordType>) => {
     render,
     dataIndex,
     renderIndex,
-    ...restProps
+    scope,
+    colSpan,
+    rowSpan,
+    // ...restProps
   } = props;
 
-  const styles = useTableCellStyles({ className, rowType });
+  const styles = useTableCellStyles({ className, rowType, scope });
 
   const alignStyle: React.CSSProperties = {};
   if (align) {
     alignStyle.textAlign = align;
+  }
+
+  if (scope === "colgroup") {
+    alignStyle.textAlign = "center";
   }
 
   const mergedStyle = {
@@ -39,7 +46,13 @@ export const TableCell = <RecordType,>(props: TableCellProps<RecordType>) => {
   );
 
   return (
-    <th className={styles.root} {...restProps} style={mergedStyle}>
+    <th
+      className={styles.root}
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+      style={mergedStyle}
+      scope={scope}
+    >
       {childNode}
     </th>
   );

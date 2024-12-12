@@ -13,7 +13,8 @@ import { ColumnType } from "../interface";
 export function TableBody<RecordType>(props: TableBodyProps<RecordType>) {
   const { data = [], getRowKey, style, columns } = props;
   const styles = useTableBodyStyles();
-  const columnsKey = useMemo(() => getColumnsKey(columns), [columns]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const columnsKey = useMemo(() => getColumnsKey(columns as any), [columns]);
 
   return (
     <tbody className={styles.root} style={style}>

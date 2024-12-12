@@ -1,4 +1,4 @@
-import { ColumnsType } from "../interface";
+import type { ColumnsType } from "../interface";
 
 export type TableHeaderPosition = "start" | "end";
 

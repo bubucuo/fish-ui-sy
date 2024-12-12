@@ -1,14 +1,9 @@
-import { Key } from "react";
 import { toArray } from "../../../utilities";
-import { DataIndex } from "../components/interface";
 
 const INTERNAL_KEY_PREFIX = "FISH_UI_TABLE_KEY";
-export interface GetColumnKeyColumn {
-  key?: Key;
-  dataIndex?: DataIndex;
-}
 
-export function getColumnsKey(columns: readonly GetColumnKeyColumn[]) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getColumnsKey(columns: any[]) {
   const columnKeys: React.Key[] = [];
   const keys: Record<PropertyKey, boolean> = {};
 

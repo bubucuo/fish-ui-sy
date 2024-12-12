@@ -41,6 +41,15 @@ const useTDStyles_ = makeStyles({
       content: "none",
     },
   },
+  // 如果bordered为false，则不显示colgroup的border
+  noneBorderThOfColgroup: {
+    "&:first-child": {
+      borderBottom: "none",
+      "::before": {
+        content: "none",
+      },
+    },
+  },
   bordered: {
     "border-inline-end": `1px solid ${borderColor}`,
     transition: "background 0.2s, border-color 0.2s",
@@ -51,9 +60,6 @@ const useTDStyles_ = makeStyles({
   },
   borderHeader: {
     "border-start-start-radius": "8px",
-    "&:last-child": {
-      "border-start-end-radius": "8px",
-    },
   },
 });
 
@@ -63,6 +69,7 @@ const useTDStyles_ = makeStyles({
 export const useTableCellStyles = <RecordType>({
   className,
   rowType,
+  scope,
 }: Partial<TableCellProps<RecordType>>) => {
   const { bordered } = useTableContext();
 
@@ -75,6 +82,7 @@ export const useTableCellStyles = <RecordType>({
       rowType === "header" && tdStyles.head,
       bordered && tdStyles.bordered,
       bordered && rowType === "header" && tdStyles.borderHeader,
+      !bordered && scope === "colgroup" && tdStyles.noneBorderThOfColgroup,
       className
     ),
   };

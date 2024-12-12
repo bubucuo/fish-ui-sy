@@ -1,4 +1,4 @@
-import { AlignType, ColumnType } from "../interface";
+import type { AlignType, ColumnType, ScopeType } from "../interface";
 
 /**
  * DialogBody Props
@@ -12,4 +12,7 @@ export type TableCellProps<RecordType> =
     align?: AlignType;
     rowType?: "header" | "body" | "footer";
     dataIndex?: ColumnType<RecordType>["dataIndex"];
+    scope?: ScopeType;
+    colSpan?: number;
+    rowSpan?: number;
   };

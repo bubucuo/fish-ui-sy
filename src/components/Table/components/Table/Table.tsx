@@ -4,7 +4,7 @@ import { useTableStyles } from "./useTableStyles.styles";
 import { TableHeader } from "../TableHeader";
 import { TableBody } from "../TableBody";
 import type { DefaultRecordType, GetRowKey } from "../interface";
-import { convertChildrenToColumns } from "../hooks/useColumns";
+import { useColumns } from "../hooks/useColumns";
 import { TableContextProvider } from "../context/TableContext";
 
 /**
@@ -28,13 +28,13 @@ export const Table = React.forwardRef(function Table<
 
   const styles = useTableStyles({ className, bordered });
 
-  const baseColumns = React.useMemo(() => {
-    if (columns) {
-      return columns;
-    }
-    const newColumns = convertChildrenToColumns<RecordType>(children);
-    return newColumns || [];
-  }, [columns, children]);
+  const [baseColumns, flattenColumns] = useColumns(columns, children);
+  console.log(
+    "%c [ baseColumns ]-32",
+    "font-size:13px; background:pink; color:#bf2c9f;",
+    baseColumns,
+    flattenColumns
+  );
 
   const getRowKey = React.useMemo<GetRowKey<RecordType>>(() => {
     if (typeof rowKey === "function") {
@@ -65,7 +65,7 @@ export const Table = React.forwardRef(function Table<
           {showHeader && <TableHeader<RecordType> columns={baseColumns} />}
           <TableBody<RecordType>
             data={dataSource}
-            columns={baseColumns}
+            columns={flattenColumns}
             getRowKey={getRowKey}
           />
         </table>

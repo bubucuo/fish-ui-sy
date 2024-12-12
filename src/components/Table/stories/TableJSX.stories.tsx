@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, Table, Column } from "fish-ui-sy";
+import { Space, Table, Column, ColumnGroup } from "fish-ui-sy";
 
 interface DataType {
   key: React.Key;
@@ -34,9 +34,11 @@ const data: DataType[] = [
 ];
 
 const TableJSX: React.FC = () => (
-  <Table<DataType> dataSource={data}>
-    <Column title="First Name" dataIndex="firstName" key="firstName" />
-    <Column title="Last Name" dataIndex="lastName" key="lastName" />
+  <Table<DataType> dataSource={data} bordered={false}>
+    <ColumnGroup title="Name">
+      <Column title="First Name" dataIndex="firstName" key="firstName" />
+      <Column title="Last Name" dataIndex="lastName" key="lastName" />
+    </ColumnGroup>
     <Column title="Age" dataIndex="age" key="age" />
     <Column title="Address" dataIndex="address" key="address" />
     <Column

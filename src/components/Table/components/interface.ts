@@ -20,6 +20,12 @@ export type RowKey<RecordType> =
   | keyof RecordType
   | GetRowKey<RecordType>;
 
+export type ColScopeType = "col" | "colgroup";
+
+export type RowScopeType = "row" | "rowgroup";
+
+export type ScopeType = ColScopeType | RowScopeType;
+
 export type ScrollConfig = {
   index?: number;
   key?: React.Key;
@@ -36,11 +42,22 @@ export type Reference = {
 //   | ((props: ColumnTitleProps<RecordType>) => React.ReactNode);
 
 // =================== Column ===================
-export type ColumnsType<RecordType = unknown> =
-  readonly ColumnType<RecordType>[];
+export type ColumnsType<RecordType = unknown> = readonly (
+  | ColumnGroupType<RecordType>
+  | ColumnType<RecordType>
+)[];
 
 export interface CellType<RecordType> {
+  key?: Key;
+  className?: string;
+  style?: React.CSSProperties;
+  children?: React.ReactNode;
   column?: ColumnsType<RecordType>[number];
+  colSpan?: number;
+  rowSpan?: number;
+
+  /** Only used for table header */
+  hasSubColumns?: boolean;
 }
 
 export interface RenderedCell<RecordType> {
@@ -52,6 +69,11 @@ interface ColumnSharedType {
   title?: React.ReactNode;
   key?: Key;
   align?: AlignType;
+  className?: string;
+}
+
+export interface ColumnGroupType<RecordType> extends ColumnSharedType {
+  children: ColumnsType<RecordType>;
 }
 
 export interface ColumnType<RecordType> extends ColumnSharedType {
