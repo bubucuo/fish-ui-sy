@@ -14,9 +14,10 @@ const useStyles = makeStyles({
   },
   tr: {
     display: "table-row",
+    backgroundColor: tokens.colorNeutralBackground1, //添加背景颜色
     ":hover": {
       cursor: "pointer",
-      backgroundColor: tokens.colorNeutralBackground1Hover,
+      backgroundColor: tokens.colorNeutralBackground1Hover, // 添加每一行的hover背景颜色
     },
   },
 });

@@ -17,7 +17,6 @@ const useTDStyles_ = makeStyles({
     borderBottom: `1px solid ${borderColor}`,
     fontWeight: 500,
     fontSize: "14px",
-    backgroundColor: tokens.colorNeutralBackground1,
   },
 
   head: {
