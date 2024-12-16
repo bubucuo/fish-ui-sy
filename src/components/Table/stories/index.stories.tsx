@@ -4,12 +4,15 @@ import { Table, Column } from "fish-ui-sy";
 
 import Default from "./TableDefault.stories";
 import TableJSX from "./TableJSX.stories";
+import Selection from "./TableSelection.stories";
 
 // ! raw code imports
 /*  @ts-expect-error - required for ts*/
 import DefaultSource from "./TableDefault.stories.tsx?raw";
 /*  @ts-expect-error - required for ts*/
 import TableJSXSource from "./TableJSX.stories.tsx?raw";
+/*  @ts-expect-error - required for ts*/
+import SelectionSource from "./TableSelection.stories.tsx?raw";
 
 const meta: Meta = {
   title: "组件/Table",
@@ -45,4 +48,12 @@ export default meta;
   },
 };
 
-export { Default, TableJSX };
+(Selection as any).parameters = {
+  docs: {
+    source: {
+      code: SelectionSource,
+    },
+  },
+};
+
+export { Default, TableJSX, Selection };

@@ -6,6 +6,7 @@ import { TableBody } from "../TableBody";
 import type { DefaultRecordType, GetRowKey } from "../interface";
 import { useColumns } from "../hooks/useColumns";
 import { TableContextProvider } from "../context/TableContext";
+import { useSelection } from "../hooks/useSelection";
 
 /**
  * A table displays rows of data.
@@ -15,7 +16,7 @@ export const Table = React.forwardRef(function Table<
 >(props: TableProps<RecordType>, ref: React.Ref<HTMLDivElement>) {
   const {
     className,
-    dataSource,
+    dataSource = [],
     rowKey = "key",
     showHeader = true,
     // title,
@@ -23,18 +24,15 @@ export const Table = React.forwardRef(function Table<
     columns,
     children,
     bordered = false,
+    rowSelection,
     ...restProps
   } = props;
 
   const styles = useTableStyles({ className, bordered });
 
-  const [baseColumns, flattenColumns] = useColumns(columns, children);
-  console.log(
-    "%c [ baseColumns ]-32",
-    "font-size:13px; background:pink; color:#bf2c9f;",
-    baseColumns,
-    flattenColumns
-  );
+  // ========================== Columns ==========================
+  // 第一个参数是_baseColumns 暂时不用
+  const [, flattenColumns] = useColumns(columns, children);
 
   const getRowKey = React.useMemo<GetRowKey<RecordType>>(() => {
     if (typeof rowKey === "function") {
@@ -46,6 +44,14 @@ export const Table = React.forwardRef(function Table<
       return key;
     };
   }, [rowKey]);
+
+  // ========================== Selections ==========================
+  const [mergedColumns] = useSelection(
+    flattenColumns,
+    dataSource,
+    getRowKey,
+    rowSelection
+  );
 
   const TableContextValue = React.useMemo(() => {
     return {
@@ -62,10 +68,10 @@ export const Table = React.forwardRef(function Table<
         ref={ref}
       >
         <table className={styles.table}>
-          {showHeader && <TableHeader<RecordType> columns={baseColumns} />}
+          {showHeader && <TableHeader<RecordType> columns={mergedColumns} />}
           <TableBody<RecordType>
             data={dataSource}
-            columns={flattenColumns}
+            columns={mergedColumns}
             getRowKey={getRowKey}
           />
         </table>

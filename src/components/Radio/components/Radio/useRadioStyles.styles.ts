@@ -116,6 +116,7 @@ const useInputBaseClassName = makeResetStyles({
     [`& ~ .${radioClassNames.indicator}`]: {
       borderColor: tokens.colorNeutralStrokeDisabled,
       color: tokens.colorNeutralForegroundDisabled,
+      backgroundColor: tokens.colorNeutralBackgroundDisabled,
       "@media (forced-colors: active)": {
         borderColor: "GrayText",
         color: "GrayText",

@@ -86,6 +86,7 @@ export const useRootStyles = makeStyles({
   disabled: {
     cursor: "not-allowed",
     color: tokens.colorNeutralForegroundDisabled,
+
     [vars.indicatorBorderColor]: tokens.colorNeutralStrokeDisabled,
     [vars.indicatorColor]: tokens.colorNeutralForegroundDisabled,
 
@@ -95,6 +96,10 @@ export const useRootStyles = makeStyles({
     //   color: "GrayText",
     //   [vars.indicatorColor]: "GrayText",
     // },
+
+    "& span": {
+      backgroundColor: tokens.colorNeutralBackgroundDisabled,
+    },
   },
 });
 

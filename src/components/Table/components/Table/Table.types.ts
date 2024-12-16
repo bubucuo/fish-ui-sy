@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { ColumnsType, RowKey } from "../interface";
+import type { ColumnsType, RowKey, TableRowSelection } from "../interface";
 
 export type PanelRender<RecordType> = (
   data: readonly RecordType[]
@@ -48,4 +48,9 @@ export type TableProps<RecordType = any> =
      * Footer of the table
      */
     footer?: PanelRender<RecordType>;
+
+    /**
+     * Row selection config
+     */
+    rowSelection?: TableRowSelection<RecordType>;
   };

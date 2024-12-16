@@ -1,3 +1,5 @@
+import type { CheckboxProps } from "../../Checkbox";
+
 export type Key = React.Key;
 export type AlignType =
   | "start"
@@ -94,4 +96,22 @@ export type GetComponentProps<DataType> = (
 export interface RenderedCell<RecordType> {
   props?: CellType<RecordType>;
   children?: React.ReactNode;
+}
+
+// ================= Selection =================
+export type RowSelectMethod = "all" | "single";
+
+export type RowSelectionType = "checkbox" | "radio";
+
+export interface TableRowSelection<T> {
+  type?: RowSelectionType;
+  selectedRowKeys?: Key[];
+  onChange?: (
+    selectedRowKeys: Key[],
+    selectedRows: T[],
+    info: { type: RowSelectMethod }
+  ) => void;
+  getCheckboxProps?: (
+    record: T
+  ) => Partial<Omit<CheckboxProps, "checked" | "defaultChecked">>;
 }
