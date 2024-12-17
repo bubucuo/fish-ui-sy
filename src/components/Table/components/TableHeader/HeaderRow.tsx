@@ -29,6 +29,7 @@ const HeaderRow = <RecordType,>(props: RowProps<RecordType>) => {
             align={column?.align}
             key={columnsKey[cellIndex]}
             rowType="header"
+            index={cellIndex}
           />
         );
       })}

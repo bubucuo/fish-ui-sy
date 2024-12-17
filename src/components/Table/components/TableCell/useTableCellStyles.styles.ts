@@ -2,6 +2,7 @@ import { makeStyles, mergeClasses } from "@griffel/react";
 import { tokens } from "../../../../tokens";
 import { TableCellProps } from "./TableCell.types";
 import { useTableContext } from "../context/TableContext";
+import { ASCEND, DESCEND } from "./TableCell";
 
 export const tableCellClassNames = {
   root: "fish-ui-TableCell",
@@ -60,6 +61,36 @@ const useTDStyles_ = makeStyles({
   borderHeader: {
     "border-start-start-radius": "8px",
   },
+
+  sorter: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    right: "10px",
+  },
+
+  arrow: {
+    cursor: "pointer",
+    fontSize: tokens.fontSizeBase100,
+    ":hover": {
+      color: tokens.colorCompoundBrandForeground1Hover,
+      fontSize: tokens.fontSizeBase300,
+    },
+  },
+
+  canClick: {
+    cursor: "pointer",
+    userSelect: "none",
+    transition: "color 0.3s",
+    paddingRight: "34px",
+    "&:hover": {
+      backgroundColor: tokens.colorNeutralBackground1,
+    },
+  },
+  selected: {
+    color: tokens.colorPaletteRedBorderActive,
+    fontSize: tokens.fontSizeBase300,
+  },
 });
 
 /**
@@ -69,10 +100,15 @@ export const useTableCellStyles = <RecordType>({
   className,
   rowType,
   scope,
+  column,
+  index,
 }: Partial<TableCellProps<RecordType>>) => {
-  const { bordered } = useTableContext();
+  const { bordered, sortInfo } = useTableContext();
 
   const tdStyles = useTDStyles_();
+
+  const isASCEND = sortInfo?.[0] === index && sortInfo?.[1] === ASCEND;
+  const isDESCEND = sortInfo?.[0] === index && sortInfo?.[1] === DESCEND;
 
   const styles = {
     root: mergeClasses(
@@ -82,8 +118,12 @@ export const useTableCellStyles = <RecordType>({
       bordered && tdStyles.bordered,
       bordered && rowType === "header" && tdStyles.borderHeader,
       !bordered && scope === "colgroup" && tdStyles.noneBorderThOfColgroup,
+      column?.sorter && tdStyles.canClick,
       className
     ),
+    sorter: tdStyles.sorter,
+    arrowASCEND: mergeClasses(tdStyles.arrow, isASCEND && tdStyles.selected),
+    arrowDESCEND: mergeClasses(tdStyles.arrow, isDESCEND && tdStyles.selected),
   };
 
   return styles;

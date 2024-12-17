@@ -5,6 +5,7 @@ import { Table, Column } from "fish-ui-sy";
 import Default from "./TableDefault.stories";
 import TableJSX from "./TableJSX.stories";
 import Selection from "./TableSelection.stories";
+import FilterAndSort from "./TableSort.stories";
 
 // ! raw code imports
 /*  @ts-expect-error - required for ts*/
@@ -13,6 +14,8 @@ import DefaultSource from "./TableDefault.stories.tsx?raw";
 import TableJSXSource from "./TableJSX.stories.tsx?raw";
 /*  @ts-expect-error - required for ts*/
 import SelectionSource from "./TableSelection.stories.tsx?raw";
+/*  @ts-expect-error - required for ts*/
+import FilterAndSortSource from "./TableSort.stories.tsx?raw";
 
 const meta: Meta = {
   title: "组件/Table",
@@ -56,4 +59,12 @@ export default meta;
   },
 };
 
-export { Default, TableJSX, Selection };
+(FilterAndSort as any).parameters = {
+  docs: {
+    source: {
+      code: FilterAndSortSource,
+    },
+  },
+};
+
+export { Default, TableJSX, Selection, FilterAndSort };

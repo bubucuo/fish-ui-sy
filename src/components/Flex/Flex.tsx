@@ -7,9 +7,19 @@ import { isPresetSize } from "../../utilities/utils/gapSize";
 export const Flex: ForwardRefComponent<FlexProps> = React.forwardRef(
   (props, ref) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { children, flex, gap, style, wrap, justify, align, ...restProps } =
-      props;
-    const styles = useFlexStyles(props);
+    const {
+      children,
+      flex,
+      gap,
+      style,
+      wrap,
+      justify,
+      align,
+      vertical,
+      className,
+      ...restProps
+    } = props;
+    const styles = useFlexStyles({ vertical, gap, className });
 
     const mergedStyle = {
       ...style,

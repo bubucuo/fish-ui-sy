@@ -15,4 +15,5 @@ export type TableCellProps<RecordType> =
     scope?: ScopeType;
     colSpan?: number;
     rowSpan?: number;
+    column?: ColumnType<RecordType>;
   };

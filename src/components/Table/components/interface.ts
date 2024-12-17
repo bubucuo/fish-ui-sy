@@ -78,6 +78,9 @@ export interface ColumnGroupType<RecordType> extends ColumnSharedType {
   children: ColumnsType<RecordType>;
 }
 
+export type SortOrder = "descend" | "ascend" | null;
+export type CompareFn<T> = (a: T, b: T, sortOrder?: SortOrder) => number;
+
 export interface ColumnType<RecordType> extends ColumnSharedType {
   dataIndex?: DataIndex;
   render?: (
@@ -85,6 +88,9 @@ export interface ColumnType<RecordType> extends ColumnSharedType {
     record: RecordType,
     index: number
   ) => React.ReactNode | RenderedCell<RecordType>;
+  // Sorter
+  sorter?: CompareFn<RecordType>;
+  sortDirections?: SortOrder[];
 }
 
 // ================= Customized =================
@@ -115,3 +121,21 @@ export interface TableRowSelection<T> {
     record: T
   ) => Partial<Omit<CheckboxProps, "checked" | "defaultChecked">>;
 }
+
+// sort
+export interface SorterResult<RecordType> {
+  column?: ColumnType<RecordType>;
+  order?: SortOrder;
+  field?: Key | readonly Key[];
+}
+
+const TableActions = ["paginate", "sort"] as const;
+export type TableAction = (typeof TableActions)[number];
+
+export interface TableCurrentDataSource<RecordType> {
+  currentDataSource: readonly RecordType[];
+  action: TableAction;
+}
+
+export type SortInfo = [number | null, SortOrder];
+export type UpdateSortInfo = ((_sortInfo: SortInfo) => void) | null;
